@@ -1,0 +1,7 @@
+secure.title=
+secure.username=\u7528\u6237\u540d:
+secure.password=Password:
+secure.remember=Remember me
+secure.signin=Sign in
+secure.error=Oops, unknown username or password.
+secure.logout=You have been logged out.
