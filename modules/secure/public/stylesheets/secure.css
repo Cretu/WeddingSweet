@@ -19,6 +19,7 @@ html, body {
     background: #fff;
     padding: 10px;
     text-align: left;
+    -webkit-border-radius: 15px;
 }
 
 #login form p {
@@ -77,4 +78,8 @@ html, body {
 
 #login .success {
     background: #008800 !important;
+}
+#signin{
+    background-color: #696969;
+    -webkit-border-radius: 3px;
 }
