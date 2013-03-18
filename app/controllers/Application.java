@@ -1,11 +1,6 @@
 package controllers;
 
-import play.*;
 import play.mvc.*;
-
-import java.util.*;
-
-import models.*;
 
 public class Application extends Controller {
 
@@ -13,4 +8,8 @@ public class Application extends Controller {
         render();
     }
 
+    @Check("admin")
+    public static void secret() throws Throwable {
+        renderText("这是一个需要授权才能访问的页面");
+    }
 }

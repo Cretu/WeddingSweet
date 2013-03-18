@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<div>当前登陆用户：${loginUser.name}  --- <a href="@{Users.logout()}">退出</a></div>
+<ul>
+    #{list items:users,as:'user'}
+        <li>${user.name}- ${user.age}</li>
+    #{/list}
+</ul>
+</body>
+</html>

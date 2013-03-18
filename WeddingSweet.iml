@@ -6,6 +6,9 @@
       <sourceFolder url="file://$MODULE_DIR$/app" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
     </content>
+    <content url="file://$MODULE_DIR$/modules/crud">
+      <sourceFolder url="file://$MODULE_DIR$/modules/crud/app" isTestSource="false" />
+    </content>
     <content url="file://$MODULE_DIR$/modules/secure">
       <sourceFolder url="file://$MODULE_DIR$/modules/secure/app" isTestSource="false" />
     </content>

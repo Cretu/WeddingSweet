@@ -3,6 +3,8 @@ package controllers;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.Date;
+
+import play.Logger;
 import play.Play;
 import play.mvc.*;
 import play.data.validation.*;
@@ -10,7 +12,6 @@ import play.libs.*;
 import play.utils.*;
 
 public class Secure extends Controller {
-
     @Before(unless={"login", "authenticate", "logout"})
     static void checkAccess() throws Throwable {
         // Authent
@@ -57,6 +58,7 @@ public class Secure extends Controller {
                 }
                 if(Crypto.sign(restOfCookie).equals(sign)) {
                     session.put("username", username);
+                    Logger.info(controllers.Security.connected() + " 已成功登陆");
                     redirectToOriginalURL();
                 }
             }
@@ -101,6 +103,8 @@ public class Secure extends Controller {
         response.removeCookie("rememberme");
         Security.invoke("onDisconnected");
         flash.success("secure.logout");
+        Logger.info(controllers.Security.connected()+" 已成功退出");
+
         login();
     }
 
