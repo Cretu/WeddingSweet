@@ -1,16 +1,223 @@
-<!DOCTYPE html>
-
+<!DOCTYPE html><!--  \btppabs="h[^"]*"   -->
 <html>
-    <head>
-        <title>#{get 'title' /}</title>
-        <meta charset="${_response_encoding}">
-        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
-        #{get 'moreStyles' /}
-        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
-        <script src="@{'/public/javascripts/jquery-1.6.4.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
-        #{get 'moreScripts' /}
-    </head>
-    <body>
-        #{doLayout /}
-    </body>
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>婚庆咨询服务一站式服务平台_WeddingSweet 蜜婚网</title>
+    <script type="text/javascript" src="@{'/public/javascripts/jquery-1.7.2.min.js'}"></script>
+    <script type="text/javascript" src="@{'/public/javascripts/general.js'}"></script>
+    <link href="@{'/public/stylesheets/general.css'}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="header">
+    <div id="top">
+        <div class="top">
+            <div class="top_left">
+                欢迎来到蜜婚网！<a href="@{Users.register()}">注册</a><a href="@{Users.login}">登录</a>
+            </div>
+            <ul class="top_right">
+                <li><a href="/user/">我的订单</a></li>
+                <li class="spacer">|</li>
+                <li>
+                    <div class="item">
+                        <a href="#">我的蜜婚</a><span></span>
+                        <div class="mlist">
+                            <div class="mlist_hd"></div>
+                            <ul>
+                                <li><a href="/user/coupon">我的消费券</a></li>
+                                <li><a href="/user/card">我的优惠券</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="spacer">|</li>
+                <li>
+                    <div class="item">
+                        <a href="#">帮助中心</a><span></span>
+                        <div class="mlist">
+                            <div class="mlist_hd"></div>
+                            <ul>
+                                <li><a href="#">如何购买</a></li>
+                                <li><a href="#">联系我们</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+    <div id="header_content">
+        <div id="logo"><a href="/"><img src="@{'/public/images/general/site_logo.gif'}" alt="" /></a></div>
+        <div class="city">
+            <a><font>幸福婚礼甜蜜蜜</font><span></span></a>
+        </div>
+        <div class="search">
+            <div class="input"><input class="default" name="search" id="search" value="搜索商家名或关键字" /></div>
+            <div class="search_btn"><a onclick="javascript:void(0);" id="search_sub"></a></div>
+        </div>
+        <div class="phone"></div>
+        <div class="slogan"></div>
+        <div class="clear"></div>
+    </div>
+    <!-- Nav start -->
+    <div id="nav">
+        <div class="ge_corner_r"></div>
+        <ul class="title_ul">
+            <li class="pro_cat" id="pro_cat">
+                <div class="ge_corner_l"></div>
+                <a href="javascript:void(0);">所有商品分类</a><span></span>
+            </li>
+            <li class="on"><a href="/" target="_blank">首页</a></li>
+            <li><a href="http://www.d8wed.com" target="_blank">精品团购</a></li>
+            <li><a href="#" target="_blank">消费者保障</a></li>
+        </ul>
+        <div class="cart_btn" id="cart_btn">
+            <div class="cart_num" id="cart_num">
+                <a href="/buy/cart.php"><span id="cart_quantity">0</span>件商品  去购物车结算</a>
+            </div>
+            <div class="cart_list" id="cart_list">
+                <ul>
+                </ul>
+                <div class="cart_bottom">
+                    购物车中共<span id="cart_count">0</span>件商品，总计：<label id="cart_origin">0.00</label><a href="/buy/cart.php"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <!-- hover start -->
+        <div id="header_side">
+            <div class="h_nav">
+                <ul>
+                    <li>
+                        <span class="ttl"><label></label><a href="/shenzhen-1-0-1-1.html" target="_blank">摄影服务</a></span>
+                        <a href="/shenzhen-1-1-1-1.html" target="_blank">婚纱摄影</a>
+                        <a href="/shenzhen-1-2-1-1.html" target="_blank">旅游婚纱摄影</a>
+                        <a href="/shenzhen-1-2-1-1.html" target="_blank">写真</a>
+                        <a href="/shenzhen-1-4-1-1.html" target="_blank">孕妇/儿童照/全家福</a>
+                    </li>
+                    <li>
+                        <span class="ttl"><label></label><a href="/shenzhen-3-0-1-1.html" target="_blank">婚礼服务</a></span>
+                        <a href="/shenzhen-3-14-1-1.html" target="_blank">新娘跟妆</a>
+                        <a href="/shenzhen-3-12-1-1.html" target="_blank">婚礼策划</a>
+                        <a href="/shenzhen-3-15-1-1.html" target="_blank">婚车租赁</a>
+                        <a href="/shenzhen-3-16-1-1.html" target="_blank">婚礼跟拍</a>
+                        <a href="/shenzhen-2-0-1-1.html" target="_blank">婚宴喜宴</a>
+                    </li>
+                    <li>
+                        <span class="ttl"><label></label><a href="/shenzhen-4-0-1-1.html" target="_blank">婚纱礼服</a></span>
+                        <a href="/shenzhen-4-17-1-1.html" target="_blank">精美婚纱</a>
+                        <a href="/shenzhen-4-19-1-1.html" target="_blank">男士礼服</a>
+                        <a href="/shenzhen-4-20-1-1.html" target="_blank">女士礼服</a>
+                    </li>
+                    <li>
+                        <span class="ttl"><label></label><a href="/shenzhen-6-0-1-1.html" target="_blank">珠宝首饰</a></span>
+                        <a href="/shenzhen-4-21-1-1.html" target="_blank">钻戒</a>
+                        <a href="/shenzhen-4-22-1-1.html" target="_blank">配饰</a>
+                    </li>
+                    <li>
+                        <span class="ttl"><label></label><a href="#" target="_blank">蜜月旅游</a></span>
+                        <a href="#" target="_blank" style="padding-right:0px;">马尔代夫</a>
+                        <a href="#" target="_blank" style="padding-right:0px;">毛里求斯</a>
+                        <a href="#" target="_blank" style="padding-right:0px;">普吉岛</a>
+                        <a href="#" target="_blank" style="padding-right:0px;">巴厘岛</a>
+                        <a href="#" target="_blank" style="padding-right:0px;">新加坡</a>
+                        <a href="#" target="_blank" style="padding-right:0px;">马来西亚</a>
+                        <a href="#" target="_blank" style="padding-right:0px;">曼谷</a>
+                        <a href="#" target="_blank" style="padding-right:0px;">清迈</a>
+                    </li>
+                    <li>
+                        <span class="ttl"><label></label><a href="#" target="_blank">酒水饮品</a></span>
+                        <a href="#" target="_blank">红酒</a>
+                        <a href="#" target="_blank">香槟</a>
+                    </li>
+                    <!--
+                    <li class="single">
+                        <div class="ttl"><span class="point"></span><span></span><a href="#" target="_blank">婚礼租车</a></div>
+                    </li>
+
+
+
+                    <li>
+                        <div class="ttl"><span class="point"></span><span></span><a href="#" target="_blank">鲜花</a></div>
+                        <a href="#" target="_blank">新娘美妆</a>
+                        <a href="#" target="_blank">婚礼跟拍</a>
+                        <a href="#" target="_blank">其他</a>
+                    </li>
+                    -->
+                    <li class="last">
+                        <span class="ttl"><label></label><a href="/shenzhen-8-0-1-1.html" target="_blank">婚礼用品</a></span>
+                        <a href="/shenzhen-8-18-1-1.html" target="_blank">喜庆床品</a>
+                        <a href="/shenzhen-8-27-1-1.html" target="_blank">婚礼装饰</a>
+                        <a href="/shenzhen-8-26-1-1.html" target="_blank">喜帖</a>
+                        <a href="/shenzhen-8-25-1-1.html" target="_blank">喜糖/喜糖盒</a>
+                        <a href="/shenzhen-8-24-1-1.html" target="_blank">喜酒</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- hover end -->
+        <div class="clear"></div>
+    </div>
+    <!-- Nav end -->
+</div>
+
+#{doLayout /}
+
+<div id="footer">
+    <div class="footer_all">
+        <div class="footer_phone"><div class="tt1"></div></div>
+        <div class="footer_help">
+            <ul>
+                <li class="tittle">购买指南</li>
+                <li><a href="#"><span></span>购物流程</a></li>
+                <li><a href="#"><span></span>常见问题</a></li>
+            </ul>
+
+            <ul>
+                <li class="tittle">支付方式</li>
+                <li><a href="#"><span></span>网银支付</a></li>
+                <li><a href="/page/help_pay.php" target="_blank"><span></span>银行转账</a></li>
+            </ul>
+
+            <ul>
+                <li class="tittle">售后服务</li>
+                <li><a href="#"><span></span>退款政策</a></li>
+                <li><a href="#"><span></span>退款自助服务</a></li>
+                <li><a href="#"><span></span>在线客服</a></li>
+            </ul>
+
+            <ul class="business">
+                <li class="tittle">商家合作</li>
+                <li><a href="#"><span></span>与蜜婚网合作</a></li>
+                <li><a href="#"><span></span>广告服务</a></li>
+                <li><a href="#"><span></span>商家后台</a></li>
+            </ul>
+
+        </div>
+        <div class="footer_interests">
+            <div class="tt1"><span></span>10天无条件退</div>
+            <div class="tt2"><span></span>过期退还蜜婚账户</div>
+        </div>
+        <div class="clear"></div>
+
+        <div class="footer_about">
+            <div class="tt1">
+                <ul>
+                    <li><a href="/about" target="_blank">关于我们</a></li>
+                    <li><a href="/report" target="_blank">媒体报道</a></li>
+                    <li><a href="/law" target="_blank">法律顾问</a></li>
+                    <li><a href="/job" target="_blank">工作机会</a></li>
+                    <li><a href="/friends" target="_blank">友情链接</a></li>
+                    <li><a href="/contact" target="_blank">联系我们</a></li>
+                </ul>
+                <p>Copyright @ 2013 蜜婚网 weddingsweet.com (渝ICP8888888号)</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
 </html>

@@ -1,0 +1,122 @@
+@charset "utf-8";
+/* CSS Document */
+
+#slide{ width:1180px; margin-bottom:10px;}
+	#slide_nav{ float:left; width:215px;}
+	#slide_pic{ float:right; width:960px;}
+
+	#slide_nav li{position:absolute; left:0px; border-left:1px solid #d8d8d8; border-right:1px solid #d8d8d8; background:#f7f7f7; padding:0px 10px; color:#aaa;}
+	#slide_nav li a{ font-size:14px; font-weight:bold; color:#333; font-family:"微软雅黑";}
+	#slide_nav li p{ margin:0px; line-height:16px;}
+
+	#slide_nav{ position:relative;}
+	#slide_nav .n_01{ top:0px; z-index:11;}
+	#slide_nav .n_02{ top:66px; z-index:12;}
+	#slide_nav .n_03{ top:131px; z-index:13;}
+	#slide_nav .n_04{ top:196px; z-index:14;}
+	#slide_nav .n_05{ top:261px; z-index:15;}
+	#slide_nav .n_06{ top:326px; z-index:16;}					
+	#slide_nav .n_07{ top:391px; z-index:17;}
+	
+	#slide_nav .n_01_on{ top:0px;z-index:20; border:1px solid #d8d8d8; border-right:none; border-left:5px solid #ff003c; padding:0px 11px 0px 6px; background:#fff;}
+	#slide_nav .n_02_on{ top:65px;z-index:20; border:1px solid #d8d8d8; border-right:none; border-left:5px solid #ff003c; padding:0px 11px 0px 6px; background:#fff;}
+	#slide_nav .n_03_on{ top:130px;z-index:20; border:1px solid #d8d8d8; border-right:none; border-left:5px solid #ff003c; padding:0px 11px 0px 6px; background:#fff;}
+	#slide_nav .n_04_on{ top:195px;z-index:20; border:1px solid #d8d8d8; border-right:none; border-left:5px solid #ff003c; padding:0px 11px 0px 6px; background:#fff;}
+	#slide_nav .n_05_on{ top:260px;z-index:20; border:1px solid #d8d8d8; border-right:none; border-left:5px solid #ff003c; padding:0px 11px 0px 6px; background:#fff;}
+	#slide_nav .n_06_on{ top:325px;z-index:20; border:1px solid #d8d8d8; border-right:none; border-left:5px solid #ff003c; padding:0px 11px 0px 6px; background:#fff;}					
+	#slide_nav .n_07_on{ top:390px;z-index:20; border:1px solid #d8d8d8; border-right:none; border-left:5px solid #ff003c; padding:0px 11px 0px 6px; background:#fff;}
+
+	#slide_nav .n_01_on div{ border-bottom:none;}
+	#slide_nav .n_02_on div{ border-bottom:none;}
+	#slide_nav .n_03_on div{ border-bottom:none;}
+	#slide_nav .n_04_on div{ border-bottom:none;}
+	#slide_nav .n_05_on div{ border-bottom:none;}
+	#slide_nav .n_06_on div{ border-bottom:none;}					
+	#slide_nav .n_07_on div{ border-bottom:none;}
+	
+	#slide_nav .n_01_on a{ color:#ff003c;}
+	#slide_nav .n_02_on a{ color:#ff003c;}
+	#slide_nav .n_03_on a{ color:#ff003c;}
+	#slide_nav .n_04_on a{ color:#ff003c;}
+	#slide_nav .n_05_on a{ color:#ff003c;}
+	#slide_nav .n_06_on a{ color:#ff003c;}
+	#slide_nav .n_07_on a{ color:#ff003c;}			
+	
+	#slide_nav .first{ border-top:1px solid #d8d8d8;}
+	#slide_nav .last{ border-bottom:1px solid #d8d8d8;}	
+	#slide_nav div{ border-bottom:1px dotted #ccc;height:48px; width:115px; position:relative; padding-left:78px; padding-top:16px;}
+	#slide_nav div span{ position:absolute; width:64px; height:64px; left:3px; top:0px; display:block;}
+	#slide_nav .last div{ border-bottom:none;}
+	
+	#slide_nav .n_01 span{ background:url("../images/index/index_bg.gif")/*tpa=http://www.360hun.com/static/images/index/index_bg.gif*/ 0px 0px no-repeat;}
+	#slide_nav .n_02 span{ background:url("../images/index/index_bg.gif")/*tpa=http://www.360hun.com/static/images/index/index_bg.gif*/ -64px 0px no-repeat;}
+	#slide_nav .n_03 span{ background:url("../images/index/index_bg.gif")/*tpa=http://www.360hun.com/static/images/index/index_bg.gif*/ -192px 0px no-repeat;}
+	#slide_nav .n_04 span{ background:url("../images/index/index_bg.gif")/*tpa=http://www.360hun.com/static/images/index/index_bg.gif*/ -256px 0px no-repeat;}
+	#slide_nav .n_05 span{ background:url("../images/index/index_bg.gif")/*tpa=http://www.360hun.com/static/images/index/index_bg.gif*/ -320px 0px no-repeat;}
+	#slide_nav .n_06 span{ background:url("../images/index/index_bg.gif")/*tpa=http://www.360hun.com/static/images/index/index_bg.gif*/ -448px 0px no-repeat;}
+	#slide_nav .n_07 span{ background:url("../images/index/index_bg.gif")/*tpa=http://www.360hun.com/static/images/index/index_bg.gif*/ -384px 0px no-repeat;}
+	
+	#slide_nav .n_01_on span{ background:url("../images/index/index_bg.gif")/*tpa=http://www.360hun.com/static/images/index/index_bg.gif*/ 0px -64px no-repeat;}
+	#slide_nav .n_02_on span{ background:url("../images/index/index_bg.gif")/*tpa=http://www.360hun.com/static/images/index/index_bg.gif*/ -64px -64px no-repeat;}
+	#slide_nav .n_03_on span{ background:url("../images/index/index_bg.gif")/*tpa=http://www.360hun.com/static/images/index/index_bg.gif*/ -192px -64px no-repeat;}
+	#slide_nav .n_04_on span{ background:url("../images/index/index_bg.gif")/*tpa=http://www.360hun.com/static/images/index/index_bg.gif*/ -256px -64px no-repeat;}
+	#slide_nav .n_05_on span{ background:url("../images/index/index_bg.gif")/*tpa=http://www.360hun.com/static/images/index/index_bg.gif*/ -320px -64px no-repeat;}
+	#slide_nav .n_06_on span{ background:url("../images/index/index_bg.gif")/*tpa=http://www.360hun.com/static/images/index/index_bg.gif*/ -448px -64px no-repeat;}
+	#slide_nav .n_07_on span{ background:url("../images/index/index_bg.gif")/*tpa=http://www.360hun.com/static/images/index/index_bg.gif*/ -384px -64px no-repeat;}	
+
+	#slide_pic{ position:relative; height:456px; overflow: hidden;}
+	#slide_pic img{ border:none; margin:0px; padding:0px;}
+	#slide_pic .slide_meta{ float:left;}
+	#slide_pic .piclay {position: absolute;display: none;z-index: 97;}
+
+.floor{ margin-bottom:10px;}
+	.floor .f_ttl{ float:left; width:172px;}
+		.floor .f_ttl .ttl{ height:32px; line-height:32px; font-family:"微软雅黑"; font-size:14px; text-align:center; color:#fff; position:relative; font-weight:bold;}
+		.floor .f_ttl .f_theme{ background:#f7f7f7;}
+		
+	.floor .content{ float:right; width:1008px;}
+		.floor .tab{ position:relative;background:#f7f7f7; border-bottom:1px solid #d8d8d8; height:28px;}
+			.floor .tab ul{ position:relative; top:0px; left:0px; overflow:hidden; height:29px;}
+				.floor .tab li{ float:left; display:inline;}
+					.floor .tab li a{display:block; padding:0px 20px; height:29px; line-height:28px; color:#333; border-right:1px solid #d8d8d8; border-bottom:1px solid #d8d8d8; font-family:"微软雅黑"; font-size:14px; font-weight:bold;}
+					.floor .tab li.on a{ background:#fff;border-bottom:1px solid #fff; }
+					.floor .tab li a:hover{ text-decoration:none;}
+						
+			.floor .tab .more{ position:absolute; right:0px; top:0px;border-right:1px solid #d8d8d8; float:right;}
+				.floor .tab .more a{ display:block;height:28px; line-height:28px; padding:0px 20px 0px 15px; color:#666; position:relative;  float:right;}
+				.floor .tab .more a span{ position:absolute; display:block; width:5px; height:9px; background:url("../images/index/index_bg.gif")/*tpa=http://www.360hun.com/static/images/index/index_bg.gif*/ -68px -128px no-repeat; top:9px; right:9px;}
+
+	.floor .goods{background:#fff;}
+	.floor .nav_1 {}
+	.floor .nav_2 {display: none;}
+	.floor .nav_3 {display: none;}
+	
+		.floor .goods ul{ overflow:hidden;}
+		.floor .goods li{ border-right:1px #d8d8d8 solid; border-bottom:1px #d8d8d8 solid; padding:10px 12px; float:left; display:inline; color:#333; width:227px;}
+		.floor .goods li a img {width:225px;height:150px; margin:0px; padding:0px;}
+
+			.goods p{ margin:0px; padding:0px;height:18px; line-height:18px;}
+			.goods .goods_ttl{ height:30px; line-height:30px;}
+			.goods .goods_market_price{ color:#999;}
+
+			.goods .goods_pay{ height:32px; line-height:32px; color:#ff003c; font-family:"微软雅黑"; font-size:14px; position:relative; font-weight:bold; width:225px;}
+			.goods .goods_pay a{ display:block; position:absolute; background:url("../images/index/index_bg.gif")/*tpa=http://www.360hun.com/static/images/index/index_bg.gif*/ 0px -128px no-repeat; width:68px; height:21px; right:0px; top:6px;}
+			
+			
+
+.f01{}
+	.f01 .ttl{ background:#ff003c;}
+	.f01 .tab{ border-top:3px solid #ff003c;}
+	.f01 .tab li.on a{color: #ff003c;}
+
+.f02{}
+	.f02 .ttl{ background:#ff003c;}
+	.f02 .tab{ border-top:3px solid #ff003c;}
+	.f02 .tab li.on a{color: #ff003c;}
+
+.f03{}
+	.f03 .ttl{ background:#ffb500;}
+	.f03 .tab{ border-top:3px solid #ffb500;}
+	.f03 .tab li.on a{color: #ffb500;}
+
+

@@ -12,7 +12,7 @@ import java.util.List;
  * Time: 下午4:53
  * To change this template use File | Settings | File Templates.
  */
-@With(Secure.class)
+//@With(Secure.class)
 @Check("administrator")
 public class Users extends CRUD {
     public static void list(){
@@ -24,12 +24,19 @@ public class Users extends CRUD {
 
     }
 
-
     public static void logout(){
         try {
             Secure.logout();
         } catch (Throwable throwable) {
-            throwable.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            throwable.printStackTrace();
         }
     }
+    public static void login(){
+        render();
+    }
+
+    public static void register(){
+        render();
+    }
+
 }

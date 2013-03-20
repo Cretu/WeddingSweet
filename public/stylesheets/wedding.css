@@ -1,0 +1,106 @@
+@charset "utf-8";
+/* CSS Document */
+
+.side{float:left; width:180px; margin-bottom:10px;}
+	.cat_nav{}
+		.cat_ttl{font-size:14px; font-weight:bold; background:url("../images/goods/goods_bg.gif")/*tpa=http://www.360hun.com/static/images/goods/goods_bg.gif*/ no-repeat; padding-left:2px;}
+			.cat_ttl span{ display:block;height:33px; line-height:33px; padding-left:10px;background:url("../images/goods/goods_bg.gif")/*tpa=http://www.360hun.com/static/images/goods/goods_bg.gif*/ right top no-repeat; color:#fff;}
+		.cat_nav ul{ border:1px solid #ebd7cd; border-bottom:none; border-top:3px solid #ebd7cd;}
+		.cat_nav li{ height:33px; line-height:33px; border-bottom:1px solid #ebd7cd; border-top:1px solid #fff; background:#fefaf4;padding-left:20px;}
+		.cat_nav li.on{ background:#fff;}
+			.cat_nav li.on a{ color:#cf0000;}
+
+.goods_list{ float:right; width:990px;}
+	.list_filter{ background:#f1f1f1; margin-bottom:10px;}
+	.list_content{ width:990px; overflow:hidden;}
+		.list_content ul{ width:990px; overflow:hidden;}
+		.list_content ul li{ height:330px; width:230px; float:left; text-align:center; padding:5px; margin-right:5px;}
+        .list_content ul li img {width:207px;height:138px;}
+		.list_content ul li:hover{width:228px; height: 328px; background:#f9f9f9; border:1px solid #eee;}
+			.list_content ul li p{width:200px;line-height:20px; padding:5px 0px;}
+			.list_content ul li .biz_level{ margin:auto; margin-bottom:10px;}
+			.list_content ul li .description{ color:#999;}
+
+.goods_recommend{margin-bottom:10px;}
+	.goods_recommend .ttl{ border-bottom:2px solid #cf0000; height:24px; line-height:24px;}
+	.goods_recommend ul{ overflow:hidden; padding:10px; border:1px solid #ddd;}
+	.goods_recommend li{ float:left;}
+	
+.goods_info{margin-bottom:10px; float:right;width:990px; padding-top:10px;}
+
+	.goods_ttl{font-size:16px; font-family:"微软雅黑"; color:#333; font-weight:bold; line-height:23px; padding:3px 0px;border-bottom:1px solid #eee;margin-bottom:10px;}
+	.goods_ttl span{ color:#f00; padding:3px 0px; display:block;font-size:14px;}
+
+	#goods_slide{ float:left; width:430px; margin-right:15px;margin-bottom:15px; }
+		#slide_pic{border:1px solid #eee; padding:4px; overflow:hidden; margin-bottom:8px; height:280px;}
+		#slide_pic li{ float:left;}
+		#slide_pic li img{width:420px; height:280px;}
+		#slide_img{ padding-left:5px;}
+		#slide_img li{ float:left; margin-right:10px;}
+		#slide_img li img{width:90px; height:60px;}
+		#slide_img li.on img{width:86px; height:56px; border:2px solid #cf0000;}
+		
+	.goods_intro{ float:left; width:545px;}
+		.goods_price {color:#999; margin-bottom:15px;}
+		.goods_price p{line-height:20px;}
+			.goods_id{color:#ccc;}
+			.market_price span{ text-decoration:line-through;}
+			.site_price{ color:#a10000; padding:5px 0px;}
+			.site_price span{ font-family:arial; font-size:24px; font-weight:bold;}
+			.prepaid{color:#a10000; }
+			.prepaid span{ font-size:18px;font-family:Tahoma;}
+		
+		.goods_op{background:#fcfaf9; padding:15px; line-height:18px; border:1px solid #eee;}
+			.pre_des{ border:1px solid #e7ebdc;background:#fff; padding:5px;margin:10px 0px; color:#666;}
+				.pre_des span{ color:#829f34; padding:0px 3px;}
+			.goods_num{ padding:8px 0px;}
+				.goods_num a{ display:inline-block; border:1px solid #ddd; background:#fff; width:13px; height:13px; line-height:13px; text-align:center; color:#000066; font-family:arial; font-size:11px; margin:0px 3px;}
+				.goods_num a:hover{ text-decoration:none;}
+				.goods_num span{}
+				.goods_num span input{ border:1px solid #999; height:17px; width:24px; text-align:center; padding:0px;}				
+			.btn_buy{background:url("../images/goods/pay_btn.gif")/*tpa=http://www.360hun.com/static/images/goods/pay_btn.gif*/; width:128px; height:36px; display:inline-block;}
+			.btn_fav{background:url("../images/goods/btn_fav.gif")/*tpa=http://www.360hun.com/static/images/goods/btn_fav.gif*/; width:90px; height:30px; display:inline-block; margin-left:10px;}
+		
+.biz_info{width:178px;border:1px solid #ddd; margin-bottom:10px; margin-top:10px;}
+	.biz_info .ttl{ border-bottom:1px solid #ddd; background:#fff; padding:1px;}
+		.biz_info .ttl span{ display:block; width:166px; height:26px; line-height:26px; background:#f1f1f1; padding-left:10px; color:#333; font-weight:bold;}
+		.biz_info .biz_ttl{color:#ff6784; border-bottom:1px dotted #ddd; padding:0px 0px 10px 0px;}
+		.biz_info ul{ border-top:3px solid #f7f7f7; padding:10px;}
+		.biz_info li{ padding:3px 0px; line-height:18px;}
+		.biz_info li span{ font-weight:bold;}
+		.btn_biz{background:url("../images/goods/btn_biz.gif")/*tpa=http://www.360hun.com/static/images/goods/btn_biz.gif*/; width:90px; height:24px; display:block;}
+		
+.goods_category {width:178px;border:1px solid #ddd; margin-bottom:10px; margin-top:10px;}	
+	.goods_category .ttl{ border-bottom:1px solid #ddd; background:#fff; padding:1px;}
+		.goods_category .ttl span{ display:block; width:166px; height:26px; line-height:26px; background:#f1f1f1; padding-left:10px; color:#333; font-weight:bold;}
+		.goods_category ul{ border-top:3px solid #f7f7f7; padding:10px; overflow:hidden;}
+		.goods_category li{ padding:3px 0px; line-height:18px; float:left; margin-right:20px; width:55px;}
+		.goods_category li span{ font-weight:bold;}
+
+.goods_rank{width:178px;border:1px solid #ddd; margin-bottom:10px; margin-top:10px;background:#fcfaf9;}
+	.goods_rank .ttl{ border-bottom:1px solid #ddd; background:#fff; padding:1px;}
+		.goods_rank .ttl span{ display:block; width:166px; height:26px; line-height:26px; background:#f1f1f1; padding-left:10px; color:#333; font-weight:bold;}
+		.goods_rank ul{ border-top:3px solid #f7f7f7; padding:10px; overflow:hidden;}
+		.goods_rank li{ padding:10px; text-align:center; line-height:23px; margin-bottom:10px; border-bottom: 1px dotted #DADADA;}
+			.goods_rank li img{ margin-bottom:8px; width:120px; height:80px; border:1px solid #ddd; padding:3px; background:#fff;}
+			.goods_rank li .g_biz{ color:#888; line-height:16px;}
+			.goods_rank li .g_ttl{ color:#000; font-weight:bold; padding-bottom:5px;}
+			.goods_rank li .g_point{ color:#f00; text-align:left; line-height:16px; padding-bottom:5px;}
+			.goods_rank li .g_price{}
+			
+
+.topic{ width:180px;}
+	.topic img{ margin-bottom:10px;}
+			
+.goods_des{width:990px;border-top:2px solid #fc0000;}
+	.toolbar{ border:1px solid #ddd;background:url("../images/goods/goods_bg.gif")/*tpa=http://www.360hun.com/static/images/goods/goods_bg.gif*/ 0px -33px repeat-x;overflow:hidden;}
+		.toolbar li{ float:left; height:34px; line-height:34px; position:relative; padding:0px 15px;}
+		.toolbar li span{ display:block; position:absolute; width:2px; height:33px; top:0px; right:0px;background:url("../images/goods/goods_bg.gif")/*tpa=http://www.360hun.com/static/images/goods/goods_bg.gif*/ 0px -67px;}
+		.toolbar li.on{background:url("../images/goods/goods_bg.gif")/*tpa=http://www.360hun.com/static/images/goods/goods_bg.gif*/ -2px -67px repeat-x; font-weight:bold;}
+			.toolbar li.on a{ color:#000;}
+	.goods_des .content{ padding:30px; border:1px solid #ddd; border-top:none; line-height:20px; text-align:center;}
+		.goods_des .content img{ margin-bottom:10px;}
+		.goods_des .content .ct-bt{ text-align:left;}
+		
+	
+		

@@ -64,7 +64,8 @@ public class Secure extends Controller {
             }
         }
         flash.keep("url");
-        render();
+//        render();
+        redirect("/login");//将未登录跳转至用户登陆页面，不采用Secure提供的login页面
     }
 
     public static void authenticate(@Required String username, String password, boolean remember) throws Throwable {

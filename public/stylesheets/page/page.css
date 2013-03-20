@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,button,select,option,textarea,p,span,blockquote { padding:0;margin:0;}
+body { font-family:"arial 宋体"; font-size:12px;  margin:0 auto;}
+img { border:none;}
+a { text-decoration:none;}
+ul { list-style:none;}
+.clear { clear:both;}
+
+#container { margin-top:10px;}
+
+/*job_side开始*/
+.job_side { width:200px; float:left; margin-right:10px;}
+	.job_about { width:198px; border:1px solid #d6d6d6; margin-bottom:10px;}
+		.job_about p { height:25px; background:url("../../images/page/job_side_menu.gif")/*tpa=http://www.360hun.com/static/images/page/job_side_menu.gif*//*tpa=http://www.360hun.com/static/images/page/job_side_menu.gif*/ repeat-x; font-size:14px; font-weight:bold; padding:8px 0 0 20px; color:#333333;}
+		.job_list ul li { height:21px; background:url("../../images/page/job_side_tt.gif")/*tpa=http://www.360hun.com/static/images/page/job_side_tt.gif*//*tpa=http://www.360hun.com/static/images/page/job_side_tt.gif*/ repeat-x; border-bottom:1px solid #dcdcdc; padding:7px 0 0 20px;}
+		.job_list ul .job_call { border-bottom:none;}
+			.job_list ul li span { display:block; float:right; width:9px; height:9px; background:url("../../images/page/job_arrow.gif")/*tpa=http://www.360hun.com/static/images/page/job_arrow.gif*//*tpa=http://www.360hun.com/static/images/page/job_arrow.gif*/ no-repeat; margin-top:2px; *margin-top:-13px; padding-right:30px} 
+			.job_list ul li a { color:#666666;}
+
+	.job_about .call { height:21px; background:url("../../images/page/job_side_tt.gif")/*tpa=http://www.360hun.com/static/images/page/job_side_tt.gif*//*tpa=http://www.360hun.com/static/images/page/job_side_tt.gif*/ repeat-x; padding:7px 0 0 20px; font-size:12px; font-weight:bold; color:#000;}
+	.job_about .time { padding:0 0 10px 10px; color:#999999; font-size:12px; font-weight:normal; background:none; height:auto; line-height:20px;}
+	.job_about .time a { color:#0085e6; text-decoration:underline;}
+	.job_about .phone {  padding:0 0 10px 10px; color:#ff0000; font-size:12px; font-weight:bold; background:none; height:auto;}
+	.job_about .adress { display:block; width:60px; float:left; padding:0 0 10px 10px; color:#999999; font-size:12px; font-weight:normal; background:none; height:auto; line-height:20px;}
+	.job_about .adress1 { display:block; width:120px; float:left; padding:0 0 10px 0; color:#999999; font-size:12px; font-weight:normal; background:none; height:auto; line-height:20px;} 
+/*job_side结束*/
+
+/*job_main开始*/
+.job_main { width:970px; float:left; padding-bottom:20px;}
+		.job_main .main_top .main_opportunity { height:24px; background:url("../../images/page/job_main_menu.gif")/*tpa=http://www.360hun.com/static/images/page/job_main_menu.gif*//*tpa=http://www.360hun.com/static/images/page/job_main_menu.gif*/ repeat-x; font-size:14px; font-weight:bold; color:333333; padding:8px 0 0 15px;}
+		.job_main .main_top .more { margin:30px 0 0 40px;}
+		.job_main .main_top .more ul { float:left; width:155px;}
+		.job_main .main_top .more ul li { line-height:24px;}
+		.job_main .main_top .more ul li a { color:#666666;}
+		
+			.opportunity_xz { padding:15px; font-weight:bold; color:#ff6600;}
+			.opportunity_xx { padding:0px 0 10px 15px; color:#666666;}
+			.opportunity_xv { padding:10px 0 15px 15px; color:#666666;}
+	.job_main .recruitment { font-weight:bold; color:#ff0000; padding:15px 0 20px 15px;}
+	.job_main .position { padding-left:15px; color:#666666;}
+		.position_php { display:block; font-weight:bold; color:#F00; background:url("../../images/page/job_line.gif")/*tpa=http://www.360hun.com/static/images/page/job_line.gif*//*tpa=http://www.360hun.com/static/images/page/job_line.gif*/ repeat-x bottom; line-height:20px; padding-left:10px;  margin:0 10px 16px 0;}
+		.position_ms { font-weight:bold; padding-left:20px; float:left; margin-top:4px;}
+		.position_merry { padding:0 20px; line-height:25px;}
+		.position_merry1 { display:block; padding:0 20px; line-height:25px; margin-bottom:30px;}
+		.position_nr { float:left; line-height:22px; margin:0 0 18px 4px; *margin:0 0 0 4px; width:680px;}
+		.position_more { padding-left:20px; margin-bottom:30px; line-height:20px;}
+		
+		
+	.bank_go { height:28px; background:url("../../images/page/job_side_tt.gif")/*tpa=http://www.360hun.com/static/images/page/job_side_tt.gif*//*tpa=http://www.360hun.com/static/images/page/job_side_tt.gif*/ repeat-x; border-bottom:1px solid #e5e5e5;  border-top:1px solid #f6f6f6; line-height:28px; }
+	.bank_go1 { height:28px; background:url("../../images/page/job_side_tt.gif")/*tpa=http://www.360hun.com/static/images/page/job_side_tt.gif*//*tpa=http://www.360hun.com/static/images/page/job_side_tt.gif*/ repeat-x; border-bottom:1px solid #e5e5e5; line-height:28px; }
+		.bank_go1 span { display:block; float:left; width:9px; height:28px; background:url("../../images/page/bank_arrowdown.gif")/*tpa=http://www.360hun.com/static/images/page/bank_arrowdown.gif*//*tpa=http://www.360hun.com/static/images/page/bank_arrowdown.gif*/ no-repeat center; margin:0 5px;}
+		.bank_go span { display:block; float:left; width:9px; height:28px; background:url("../../images/page/bank_arrowdown.gif")/*tpa=http://www.360hun.com/static/images/page/bank_arrowdown.gif*//*tpa=http://www.360hun.com/static/images/page/bank_arrowdown.gif*/ no-repeat center; margin:0 5px;}
+		.bank_go_list { padding-left:21px;  border-bottom:1px solid #e5e5e5;}
+		.bank_go_list ul { padding:5px 0;}
+		.bank_go_list ul li {list-style-type:disc; color:#999999; line-height:22px;}
+		.bank_go_list ul li a { color:#999999;}
+	
+	.location { margin-left:10px;}
+		.location span { display:block; float:left; color:#454545;}
+		.location .location_xz { width:18px; height:14px; background:url("../../images/page/bank_home.gif")/*tpa=http://www.360hun.com/static/images/page/bank_home.gif*//*tpa=http://www.360hun.com/static/images/page/bank_home.gif*/ no-repeat; margin-right:10px;}
+		.location .location_xx { width:6px; height:11px; background:url("../../images/page/bank_arrow.gif")/*tpa=http://www.360hun.com/static/images/page/bank_arrow.gif*//*tpa=http://www.360hun.com/static/images/page/bank_arrow.gif*/ no-repeat; margin:0 5px; margin-top:3px;}
+		.location .location_xv { margin-top:2px;}
+	
+	.bank_list { margin:5px 0 10px 0; border:1px solid #d6d6d6; padding-bottom:10px;}
+		.bank_list .bank_list_top { height:35px; background:url("../../images/page/bank_line.gif")/*tpa=http://www.360hun.com/static/images/page/bank_line.gif*//*tpa=http://www.360hun.com/static/images/page/bank_line.gif*/ repeat-x; line-height:35px; padding-left:20px; font-size:14px; font-weight:bold; color:#454545;}
+		.bank_list .bank_list_middle { padding:0 10px;}
+			.bank_list_middle .company { height:30px; background:#e1e1e1 repeat-x; margin-top:10px; padding-left:10px; color:#454545; font-weight:bold; line-height:30px;}
+			.bank_gs { border:1px solid #e1e1e1; margin:10px 10px 0 10px;}
+			
+			.bank_gs_left { float:left; width:177px; height:46px; background:url("../../images/page/bank_gs.gif")/*tpa=http://www.360hun.com/static/images/page/bank_gs.gif*//*tpa=http://www.360hun.com/static/images/page/bank_gs.gif*/ no-repeat; margin:37px 40px;}
+			.bank_zfb_left { float:left; width:177px; height:46px; background:url("../../images/page/bank_zfb.gif.png")/*tpa=http://www.360hun.com/static/images/page/bank_zfb.gif*/ no-repeat; margin:37px 40px;}
+			.bank_zs_left { float:left; width:177px; height:46px; background:url("../../images/page/bank_zs.gif")/*tpa=http://www.360hun.com/static/images/page/bank_zs.gif*//*tpa=http://www.360hun.com/static/images/page/bank_zs.gif*/ no-repeat; margin:37px 40px;}
+			.bank_js_left { float:left; width:177px; height:46px; background:url("../../images/page/bank_js.gif")/*tpa=http://www.360hun.com/static/images/page/bank_js.gif*//*tpa=http://www.360hun.com/static/images/page/bank_js.gif*/ no-repeat; margin:37px 40px;}
+			.bank_ny_left { float:left; width:177px; height:46px; background:url("../../images/page/bank_ny.gif")/*tpa=http://www.360hun.com/static/images/page/bank_ny.gif*//*tpa=http://www.360hun.com/static/images/page/bank_ny.gif*/ no-repeat; margin:37px 40px;}
+			
+			.bank_gs_right { float:left; line-height:25px; padding-top:10px; color:#454545;}
+			.bank_zfb_right { float:left; line-height:25px; padding-top:22px; color:#454545;}
+				.bank_gs_right ul li span { color:#F00;} 
+				
+		    .remarks { padding:10px; color:#F00;}
+			.bank_list_middle p { line-height:20px; padding:8px 5px 0px 10px; color:#454545;}
+			.bank_list_middle .condition { font-weight:bold; padding:15px 0 0px 10px;}
+			
+			
+		.call_qq { height:75px; border:1px solid #e1e1e1; margin:0 10px 15px 10px;}
+			.call_qq_left { float:left; width:134px; height:75px; background:#d6d6d6 repeat; font-size:14px; font-weight:bold; color:#454545; line-height:75px; text-align:center;}
+			.call_qq_right { margin:5px 0 0 160px;}
+			.call_qq_right span { display:block; float:left; width:74px; height:22px; background:url("../../images/page/qq_1.jpg")/*tpa=http://www.360hun.com/static/images/page/qq_1.jpg*//*tpa=http://www.360hun.com/static/images/page/qq_1.jpg*/ no-repeat; margin:5px 8px;0 0;}
+			
+			
+			
+		.position_law { display:block; font-weight:bold; color:#F00; background:url("../../images/page/job_line.gif")/*tpa=http://www.360hun.com/static/images/page/job_line.gif*//*tpa=http://www.360hun.com/static/images/page/job_line.gif*/ repeat-x bottom; line-height:20px; padding-left:10px; margin:10px 10px 20px 0;}		
+		.law_left { float:left; width:148px; text-align:right; line-height:30px; margin-left:10px;}
+		.law_left ul li { border:1px solid #e1e1e1; border-bottom:none; padding-right:5px;}
+		.law_right { float:left; line-height:30px; width:597px;}
+		.law_right ul li { border:1px solid #e1e1e1; border-bottom:none; border-left:none; padding-left:10px;}
+		.law_right ul .law_left_xz { border:1px solid #e1e1e1; border-left:none;}
+		.law_left ul .law_left_xz { border:1px solid #e1e1e1;}
+		
+		
+		.position_ask { display:block; font-weight:bold; color:#F00; background:url("../../images/page/job_line.gif")/*tpa=http://www.360hun.com/static/images/page/job_line.gif*//*tpa=http://www.360hun.com/static/images/page/job_line.gif*/ repeat-x bottom; line-height:20px; padding-left:10px; margin:20px 10px 10px 0;}
+		.position_ask_a { line-height:30px; padding-left:20px;}
+		.position_ask_a a { color:#f60; text-decoration:underline;}  
+		
+
+/*job_main结束*/
