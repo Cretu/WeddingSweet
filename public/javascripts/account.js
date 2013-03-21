@@ -4,7 +4,7 @@ $(function(){
 		var flag = false;
 		$('#province').change(function(){
 			var pid = $(this).val();
-			$.get('../../general/getOption.php.htm'/*tpa=http://www.360hun.com/general/getOption.php*/,{pid:pid},function(data){
+			$.get('../../general/getOption.php.htm',{pid:pid},function(data){
 				if(data){
 					$('#city').html(data);
 					//$('#city option:first').remove();
@@ -30,7 +30,7 @@ $(function(){
 							$('#user_email').parent().siblings('.list_tips').html('<font color="red">Email帐号已存在！</font>');
 						}else{
 							$('#user_email').parent().siblings('.list_tips').html('<font color="red">正确</font>');
-							$('#user_email').parents('.login_list').children('.login_list_xc').html('<img src="../images/user/account_yes.gif"/*tpa=http://www.360hun.com/static/images/user/account_yes.gif*/ />');
+							$('#user_email').parents('.login_list').children('.login_list_xc').html('<img src="../images/user/account_yes.gif" />');
 							flag = true;
 						}		
 					});
@@ -107,12 +107,12 @@ $(function(){
 		function check_input(form,msg){
 			if(msg == null){
 				$(form).parent().siblings('.list_tips').html('<font color="red">正确</font>');
-				$(form).parents('.login_list').children('.login_list_xc').html('<img src="../images/user/account_yes.gif"/*tpa=http://www.360hun.com/static/images/user/account_yes.gif*/ />');
+				$(form).parents('.login_list').children('.login_list_xc').html('<img src="../images/user/account_yes.gif" />');
 				flag = true;
 			}else{
 				flag = false;
 				//$(form).parents('.login_list').children('.account_error').remove();
-				//$(form).parents('.login_list').children('.login_list_xc').html('<img src="../images/user/account_no.gif"/*tpa=http://www.360hun.com/static/images/user/account_no.gif*/ />');
+				//$(form).parents('.login_list').children('.login_list_xc').html('<img src="../images/user/account_no.gif" />');
 				$(form).parent().siblings('.list_tips').html('<font color="red">'+msg+'</font>');
 				//$(form).parents('.login_list').append('<div class="account_error">'+msg+'</div>');
 			}

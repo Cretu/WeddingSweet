@@ -105,7 +105,7 @@ public abstract class CRUD extends Controller {
         Binder.bindBean(params.getRootParamNode(), "object", object);
         validation.valid(object);
         if (validation.hasErrors()) {
-            renderArgs.put("error", play.i18n.Messages.get("crud.hasErrors"));
+            renderArgs.put("error", Messages.get("crud.hasErrors"));
             try {
                 render(request.controller.replace(".", "/") + "/show.html", type, object);
             } catch (TemplateNotFoundException e) {
@@ -113,7 +113,7 @@ public abstract class CRUD extends Controller {
             }
         }
         object._save();
-        flash.success(play.i18n.Messages.get("crud.saved", type.modelName));
+        flash.success(Messages.get("crud.saved", type.modelName));
         if (params.get("_save") != null) {
             redirect(request.controller + ".list");
         }
@@ -142,7 +142,7 @@ public abstract class CRUD extends Controller {
         Binder.bindBean(params.getRootParamNode(), "object", object);
         validation.valid(object);
         if (validation.hasErrors()) {
-            renderArgs.put("error", play.i18n.Messages.get("crud.hasErrors"));
+            renderArgs.put("error", Messages.get("crud.hasErrors"));
             try {
                 render(request.controller.replace(".", "/") + "/blank.html", type, object);
             } catch (TemplateNotFoundException e) {
@@ -150,7 +150,7 @@ public abstract class CRUD extends Controller {
             }
         }
         object._save();
-        flash.success(play.i18n.Messages.get("crud.created", type.modelName));
+        flash.success(Messages.get("crud.created", type.modelName));
         if (params.get("_save") != null) {
             redirect(request.controller + ".list");
         }
@@ -168,10 +168,10 @@ public abstract class CRUD extends Controller {
         try {
             object._delete();
         } catch (Exception e) {
-            flash.error(play.i18n.Messages.get("crud.delete.error", type.modelName));
+            flash.error(Messages.get("crud.delete.error", type.modelName));
             redirect(request.controller + ".show", object._key());
         }
-        flash.success(play.i18n.Messages.get("crud.deleted", type.modelName));
+        flash.success(Messages.get("crud.deleted", type.modelName));
         redirect(request.controller + ".list");
     }
 

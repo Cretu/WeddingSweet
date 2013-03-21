@@ -67,7 +67,7 @@
 
         #{if field.type == 'date'}
             #{crud.dateField name:field.name, value:(currentObject ? currentObject[field.name] : null) /}
-            %{ am = messages.zh.get('crud.help.dateformat',play.libs.I18N.getDateFormat()) }%
+            %{ am = messages.get('crud.help.dateformat',play.libs.I18N.getDateFormat()) }%
         #{/if}
 
         #{if field.type == 'relation'}
@@ -92,38 +92,38 @@
                 %{
                     switch (it.annotation.annotationType().name.substring(21)) {
                         case "Required":
-                            out.println(messages.zh.get('crud.help.required'))
+                            out.println(messages.get('crud.help.required'))
                             break;
                         case "MinSize":
-                            out.println(messages.zh.get('crud.help.minlength', it.annotation.value()))
+                            out.println(messages.get('crud.help.minlength', it.annotation.value()))
                             break;    
                         case "MaxSize":
-                            out.println(messages.zh.get('crud.help.maxlength', it.annotation.value()))
+                            out.println(messages.get('crud.help.maxlength', it.annotation.value()))
                             break;
                         case "Range":
-                            out.println(messages.zh.get('crud.help.range', it.annotation.min(), it.annotation.max()))
+                            out.println(messages.get('crud.help.range', it.annotation.min(), it.annotation.max()))
                             break;
                         case "Min":
-                            out.println(messages.zh.get('crud.help.min', it.annotation.value()))
+                            out.println(messages.get('crud.help.min', it.annotation.value()))
                             break;
                         case "Email":
-                            out.println(messages.zh.get('crud.help.email'))
+                            out.println(messages.get('crud.help.email'))
                             break;
                         case "Equals":
-                            out.println(messages.zh.get('crud.help.equals', it.params.equalsTo))
+                            out.println(messages.get('crud.help.equals', it.params.equalsTo))
                             break;
                         case "Future":
                             if(it.params.reference) {
-                                out.println(messages.zh.get('crud.help.after', it.params.reference))
+                                out.println(messages.get('crud.help.after', it.params.reference))
                             } else {
-                                out.println(messages.zh.get('crud.help.future'))
+                                out.println(messages.get('crud.help.future'))
                             }
                             break;
                         case "Past":
                             if(it.params.reference) {
-                                out.println(messages.zh.get('crud.help.before', it.params.reference))
+                                out.println(messages.get('crud.help.before', it.params.reference))
                             } else {
-                                out.println(messages.zh.get('crud.help.past'))
+                                out.println(messages.get('crud.help.past'))
                             }
                             break;
                     }

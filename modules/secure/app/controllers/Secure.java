@@ -1,9 +1,9 @@
 package controllers;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.List;
 import java.util.Date;
 
+import models.User;
 import play.Logger;
 import play.Play;
 import play.mvc.*;
@@ -17,7 +17,7 @@ public class Secure extends Controller {
         // Authent
         if(!session.contains("username")) {
             flash.put("url", "GET".equals(request.method) ? request.url : Play.ctxPath + "/"); // seems a good default
-            login();
+
         }
         // Checks
         Check check = getActionAnnotation(Check.class);
@@ -41,7 +41,7 @@ public class Secure extends Controller {
 
     // ~~~ Login
 
-    public static void login() throws Throwable {
+    public static void login(@Required String email, @Required String password) throws Throwable {
         Http.Cookie remember = request.cookies.get("rememberme");
         if(remember != null) {
             int firstIndex = remember.value.indexOf("-");
@@ -63,9 +63,16 @@ public class Secure extends Controller {
                 }
             }
         }
-        flash.keep("url");
-//        render();
-        redirect("/login");//将未登录跳转至用户登陆页面，不采用Secure提供的login页面
+        //检查用户记录
+        User user = User.find("byEmailAndPassword",email,password).first();
+        if(user==null){
+            flash.error("登陆失败，请检查你的用户名或密码");
+            flash.keep("url");
+            redirect("/login");//将未登录跳转至用户登陆页面，不采用Secure提供的login页面
+        }else {
+            session.put("username",user.name);
+            Home.index();
+        }
     }
 
     public static void authenticate(@Required String username, String password, boolean remember) throws Throwable {
@@ -82,7 +89,7 @@ public class Secure extends Controller {
             flash.keep("url");
             flash.error("secure.error");
             params.flash();
-            login();
+            redirect("/login");
         }
         // Mark user as connected
         session.put("username", username);
@@ -106,7 +113,7 @@ public class Secure extends Controller {
         flash.success("secure.logout");
         Logger.info(controllers.Security.connected()+" 已成功退出");
 
-        login();
+        redirect("/");
     }
 
     // ~~~ Utils

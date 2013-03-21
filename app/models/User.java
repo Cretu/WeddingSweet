@@ -1,5 +1,7 @@
 package models;
 import javax.persistence.*;
+
+import play.data.validation.Email;
 import play.db.jpa.Model;
 
 /**
@@ -13,6 +15,8 @@ import play.db.jpa.Model;
 public class User extends Model {
     public String name;
     public int age;
+    @Email
+    public String email;
     public String password;
     public String role;
     public String imageUrl;

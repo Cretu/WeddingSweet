@@ -15,7 +15,7 @@ import java.util.List;
 //@With(Secure.class)
 @Check("administrator")
 public class Users extends CRUD {
-    public static void list(){
+    public static void listAll(){
         List<User> users = User.findAll();
         renderArgs.put("users",users);
         String loginUserName = Security.connected();
@@ -32,6 +32,9 @@ public class Users extends CRUD {
         }
     }
     public static void login(){
+        if (session.get("username")!= null){
+            Home.index();
+        }
         render();
     }
 

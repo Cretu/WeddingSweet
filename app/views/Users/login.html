@@ -6,7 +6,14 @@
     <div class="ge_ttl"><span>登录蜜婚网</span></div>
         <div class="login_main">
         <div class="login_left">
-        <form method="post" id="sub_form">
+
+        #{if flash.error}
+            <p class="error">
+            &{flash.error}
+            </p>
+        #{/if}
+
+        <form method="post" id="sub_form" action="@{Secure.login()}">
             <div class="login_list">
                 <span class="login_list_xz">E-mail：</span>
                 <span class="login_list_xx"><input type="text" id="user_email" name="email" /></span>
@@ -26,7 +33,7 @@
             <div class="login_more">
                 <div class="botton2">
                     <span class="botton_xz"><input type="button" id="sub" /></span>
-                    <span class="botton_xx" ><a href="register.php.htm" >还没注册？</a></span>
+                    <span class="botton_xx" ><a href="/register" >还没注册？</a></span>
                     <div class="clear"></div>
                 </div>
                 <p>你还可以使用这些网站的账号直接登录:</p>

@@ -19,3 +19,8 @@ GET     /public/                                staticDir:public
 
 # Import CRUD routes
 *     /admin           module:crud
+
+#login
+GET   /login           Users.login
+#register
+*   /register        Users.register
