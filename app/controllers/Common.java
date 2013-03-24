@@ -16,7 +16,11 @@ public class Common extends Controller{
         Images.Captcha captcha = Images.captcha();
         captcha.addNoise();
         String code = captcha.getText("#000FFF",4);
-        Cache.set(id, code, "1mn");
+        Cache.set(id, code, "3mn");
+        session.put("captchaID",id);
         renderBinary(captcha);
+    }
+    public static void checkCaptcha(String captcha){
+        renderText(Cache.get(session.get("captchaID")).toString().equalsIgnoreCase(captcha)?"true":"false");
     }
 }

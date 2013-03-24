@@ -44,4 +44,19 @@ public class Users extends CRUD {
         render(randomID);
     }
 
+    public static void regist(){
+        User user = new User();
+        user.email = params.get("email");
+        user.password = params.get("password");
+        user.save();
+        redirect("login");
+    }
+    public static void checkEmailExist(String email){
+        if(User.find("byEmail",email).first()!=null){
+            renderText("true");
+        }else {
+            renderText("false");
+        }
+    }
+
 }

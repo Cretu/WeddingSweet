@@ -24,6 +24,8 @@ GET     /public/                                staticDir:public
 GET   /login           Users.login
 #register
 *   /register        Users.register
+GET   /checkEmailExist       Users.checkEmailExist
 
 #Captcha
 GET     /captcha             Common.captcha
+GET     /checkCaptcha        Common.checkCaptcha

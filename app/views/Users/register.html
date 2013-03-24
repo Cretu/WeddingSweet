@@ -7,8 +7,8 @@
     <div class="ge_ttl"><span>注册用户</span></div>
             <div class="agreement_main">
         	<div class="login_left">
-        		<form method="post" id="sub_form">
-            	<div class="login_list">
+        		<form method="post" id="sub_form" action="@{Users.regist()}">
+            	<div class="login_list" id="email">
                 	<span class="login_list_xz"><s>*</s>我的邮箱：</span>
                     <span class="login_list_xx"><input type="text" name="email" id="user_email" class="userRegister"/></span>
                     <span class="login_list_xc"></span>
@@ -40,7 +40,7 @@
                     <div class="list_tips">再次确认您的密码</div>
                 </div>
                 
-                <div class="login_list">
+                <div class="login_list" id="captcha">
                 	<span class="login_list_xz"><s>*</s>验证码：</span>
                     <span class="login_list_xx" style="width:100px;"><input type="text"  id="verify" name="verify" autocomplete="off" style="width:100px;" /></span>
                     <span style="margin-top: 8px;"><img src="@{Common.captcha(randomID)}"  id="code_img" ></span>
@@ -68,40 +68,15 @@
                 
                 -->
                  <div id="readme">
-                    	<span><input type="checkbox" id="read" /></span>
-                        <span>我已看过并同意</span>
-                        <span class="agreement">《<a href="#">蜜婚网络服务使用协议</a>》</span>
-                        <div class="clear"></div>
-                    </div>
-                    <!-- 
-                <div class="login_list">
-                
-                	<span class="login_list_xz">所在城市:</span>
-                    <span class="login_list_xv"><select id="province"><option value='1'  >北京</option><option value='2'  >天津</option><option value='3'  >上海</option><option value='4'  >重庆</option><option value='5'  >河北</option><option value='6'  >河南</option><option value='7'  >黑龙江</option><option value='8'  >吉林</option><option value='9'  >辽宁</option><option value='10'  >山东</option><option value='11'  >内蒙古</option><option value='12'  >江苏</option><option value='13'  >安徽</option><option value='14'  >山西</option><option value='15'  >陕西</option><option value='16'  >甘肃</option><option value='17'  >浙江</option><option value='18'  >江西</option><option value='19'  >湖北</option><option value='20'  >湖南</option><option value='21'  >贵州</option><option value='22'  >四川</option><option value='23'  >云南</option><option value='24'  >新疆</option><option value='25'  >宁夏</option><option value='26'  >广西</option><option value='27' selected >广东</option><option value='28'  >福建</option><option value='29'  >海南</option><option value='30'  >青海</option><option value='31'  >台湾</option></select><select id="city" name="city_id"><option value='1' selected >深圳</option><option value='4'  >广州</option><option value='11'  >东莞</option><option value='27'  >佛山</option><option value='34'  >惠州</option><option value='66'  >汕头</option><option value='95'  >珠海</option><option value='96'  >中山</option><option value='98'  >肇庆</option></select></span>
+                    <span><input type="checkbox" id="read" /></span>
+                    <span>我已看过并同意</span>
+                    <span class="agreement">《<a href="#">蜜婚网络服务使用协议</a>》</span>
                     <div class="clear"></div>
-                    <div class="registration_gg"></div>
-                    
-                   
-                </div>
-                 -->
-                
+                 </div>
 
-                	<div class="botton">
-                    	<span class="botton_xb"><input type="button" id="sub" /></span>
-<!--                        <span class="botton_xx"><a href="/user/login.php">已有帐号？</a></span>-->
-                        <div class="clear"></div>
-
-                    <!-- 
-                    <p>您还可以使用这些网站的账号直接登录:</p>
-                    <div class="login_more_vv">
-                    	<span><a class="login_qq" href="#">QQ</a></span>
-                    	<span><a class="login_zfb" href="#">支付宝</a></span>
-                    	<span><a class="login_xl" href="#">新浪微博</a></span>
-                    	<span><a class="login_360" href="#">360账号</a></span>
-                    	<span class="login_tt"><a class="login_tuan" href="#">团800账号</a></span>
-                    	<div class="clear"></div>
-                    </div>
-                     -->
+                 <div class="botton">
+                    <span class="botton_xb"><input type="button" id="sub" /></span>
+                    <div class="clear"></div>
                 </div>
                 
 				</form>
