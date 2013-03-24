@@ -2,7 +2,6 @@ package controllers;
 
 import models.User;
 import play.libs.Codec;
-import play.mvc.With;
 
 import java.util.List;
 
@@ -49,7 +48,7 @@ public class Users extends CRUD {
         user.email = params.get("email");
         user.password = params.get("password");
         user.save();
-        redirect("login");
+        redirect("/login");
     }
     public static void checkEmailExist(String email){
         if(User.find("byEmail",email).first()!=null){
