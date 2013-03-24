@@ -24,3 +24,6 @@ GET     /public/                                staticDir:public
 GET   /login           Users.login
 #register
 *   /register        Users.register
+
+#Captcha
+GET     /captcha             Common.captcha

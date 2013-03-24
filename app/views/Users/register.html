@@ -42,17 +42,17 @@
                 
                 <div class="login_list">
                 	<span class="login_list_xz"><s>*</s>验证码：</span>
-                    <span class="login_list_xx" style="width:120px;"><input type="text"  id="verify" name="verify" autocomplete="off" style="width:100px;" /></span>
-                    <span style="margin-top: 8px;"><img src="../general/code.php.png"  id="code_img" ></span>
+                    <span class="login_list_xx" style="width:100px;"><input type="text"  id="verify" name="verify" autocomplete="off" style="width:100px;" /></span>
+                    <span style="margin-top: 8px;"><img src="@{Common.captcha(randomID)}"  id="code_img" ></span>
                     <span style="margin-top: 8px;">看不清？<a href="#" id="code_reload">换一张</a></span>
+                    %{String newID = play.libs.Codec.UUID();}%
                     <script>
-$(function(){
-	$('#code_reload').click(function(){
-		var timenow = new Date().getTime();
-		$('#code_img').attr('src','/general/code.php?'+timenow);
-		return false;
-	});
-});
+                    $(function(){
+                        $('#code_reload').click(function(){
+                            $('#code_img').attr('src','@{Common.captcha(newID)}');
+                            return false;
+                        });
+                    });
                     </script>
                     <div class="clear"></div>
                     <div class="list_tips">请输入验证码</div>

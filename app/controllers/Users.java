@@ -1,6 +1,7 @@
 package controllers;
 
 import models.User;
+import play.libs.Codec;
 import play.mvc.With;
 
 import java.util.List;
@@ -39,7 +40,8 @@ public class Users extends CRUD {
     }
 
     public static void register(){
-        render();
+        String randomID = Codec.UUID();
+        render(randomID);
     }
 
 }
