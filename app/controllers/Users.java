@@ -60,4 +60,9 @@ public class Users extends CRUD {
         }
     }
 
+    public static void account(){
+        String id = session.get("userID");
+        User user = User.findById(Long.valueOf(id));
+        render(user);
+    }
 }

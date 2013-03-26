@@ -1,0 +1,72 @@
+<!DOCTYPE html><!--  \btppabs="h[^"]*"   -->
+<html>
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>婚庆咨询服务一站式服务平台_WeddingSweet 蜜婚网</title>
+    <script type="text/javascript" src="@{'/public/javascripts/jquery-1.7.2.min.js'}"></script>
+    <script type="text/javascript" src="@{'/public/bootstrap/js/bootstrap.js'}"></script>
+    <link href="@{'/public/bootstrap/css/bootstrap.css'}" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="@{'/public/javascripts/general.js'}"></script>
+    <link href="@{'/public/stylesheets/general.css'}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="header">
+    <div id="top">
+        <div class="top">
+            <div class="top_left">
+            #{if session.get("userID") != null}
+                亲，欢迎来到蜜婚网！ 您已经登陆 ${session.get("username")}<a href="@{Users.account()}">账户管理</a><a href="@{Users.logout()}">退出</a>
+            #{/if}
+            #{else }
+                亲，欢迎来到蜜婚网！<a href="@{Users.register()}">注册</a><a href="@{Users.login}">登录</a>
+            #{/else}
+            </div>
+            <ul class="top_right">
+                <li><a href="/user/">我的订单</a></li>
+                <li class="spacer">|</li>
+                <li>
+                    <div class="item">
+                        <a href="#">我的蜜婚</a><span></span>
+                        <div class="mlist">
+                            <div class="mlist_hd"></div>
+                            <ul>
+                                <li><a href="/user/coupon">我的消费券</a></li>
+                                <li><a href="/user/card">我的优惠券</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="spacer">|</li>
+                <li>
+                    <div class="item">
+                        <a href="#">帮助中心</a><span></span>
+                        <div class="mlist">
+                            <div class="mlist_hd"></div>
+                            <ul>
+                                <li><a href="#">如何购买</a></li>
+                                <li><a href="#">联系我们</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+    <div id="header_content">
+        <div id="logo"><a href="/"><img src="@{'/public/images/general/site_logo.gif'}" alt="" /></a></div>
+        <div class="city">
+            <a>幸福婚礼甜蜜蜜<span></span></a>
+        </div>
+        <div class="search">
+            <div class="input"><input class="default" name="search" id="search" value="搜索商家名或关键字" /></div>
+            <div class="search_btn"><a onclick="javascript:void(0);" id="search_sub"></a></div>
+        </div>
+        <div class="phone"></div>
+        <div class="slogan"></div>
+        <div class="clear"></div>
+    </div>

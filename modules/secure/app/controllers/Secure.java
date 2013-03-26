@@ -72,6 +72,7 @@ public class Secure extends Controller {
             redirect("/login");//将未登录跳转至用户登陆页面，不采用Secure提供的login页面
         }else {
             session.put("username",user.name);
+            session.put("userID",user.id);
             Logger.info("用户["+controllers.Security.connected() + "] 已成功登陆");
             Home.index();
         }

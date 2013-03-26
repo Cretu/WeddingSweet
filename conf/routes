@@ -29,3 +29,5 @@ GET   /checkEmailExist       Users.checkEmailExist
 #Captcha
 GET     /captcha             Common.captcha
 GET     /checkCaptcha        Common.checkCaptcha
+
+GET     /account             Users.account
