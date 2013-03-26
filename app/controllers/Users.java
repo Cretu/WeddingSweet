@@ -47,6 +47,8 @@ public class Users extends CRUD {
         User user = new User();
         user.email = params.get("email");
         user.password = params.get("password");
+        user.age = 0;
+        user.name = "无名";
         user.save();
         redirect("/login");
     }

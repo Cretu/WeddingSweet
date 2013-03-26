@@ -14,15 +14,15 @@
         #{/if}
 
         <form method="post" id="sub_form" action="@{Secure.login()}">
-            <div class="login_list">
+            <div class="login_list" id="email">
                 <span class="login_list_xz">E-mail：</span>
-                <span class="login_list_xx"><input type="text" id="email" name="email" /></span>
+                <span class="login_list_xx"><input type="text" id="user_email" name="email" /></span>
                 <span class="login_list_xc"></span>
                 <div class="clear"></div>
                 <div class="list_tips">请输入您的登录邮箱</div>
             </div>
             
-            <div class="login_list">
+            <div class="login_list" id="pwd">
                 <span class="login_list_xz">密 码：</span>
                 <span class="login_list_xx"><input type="password" id="password" name="password" autocomplete="off" /></span>
                 <span class="login_list_xc"></span>
@@ -32,7 +32,7 @@
        
             <div class="login_more">
                 <div class="botton2">
-                    <span class="botton_xz"><input type="button" id="sub" /></span>
+                    <span class="botton_xz"><input type="button" id="login_sub" /></span>
                     <span class="botton_xx" ><a href="/register" >还没注册？</a></span>
                     <div class="clear"></div>
                 </div>

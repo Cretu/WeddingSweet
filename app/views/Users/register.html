@@ -7,7 +7,7 @@
     <div class="ge_ttl"><span>注册用户</span></div>
             <div class="agreement_main">
         	<div class="login_left">
-        		<form method="post" id="sub_form" action="@{Users.regist()}">
+        		<form name="register" method="post" id="sub_form" action="@{Users.regist()}">
             	<div class="login_list" id="email">
                 	<span class="login_list_xz"><s>*</s>我的邮箱：</span>
                     <span class="login_list_xx"><input type="text" name="email" id="user_email" class="userRegister"/></span>
@@ -24,7 +24,7 @@
                     <div class="list_tips">中、英文均可，至少5位，不能带有特殊符号</div>
                 </div>
                  -->
-                <div class="login_list">
+                <div class="login_list" id="pwd">
                 	<span class="login_list_xz"><s>*</s>密码：</span>
                     <span class="login_list_xx"><input type="password" id="password" name="password" autocomplete="off" /></span>
                     <span class="login_list_xc"></span>
@@ -32,7 +32,7 @@
                     <div class="list_tips">密码长度不能少于6位</div>
                 </div>
                 
-                <div class="login_list">
+                <div class="login_list" id="pwd1">
                 	<span class="login_list_xz"><s>*</s>确认密码：</span>
                     <span class="login_list_xx"><input type="password"  id="password1" name="password1"  autocomplete="off"  /></span>
                     <span class="login_list_xc"></span>
@@ -75,7 +75,7 @@
                  </div>
 
                  <div class="botton">
-                    <span class="botton_xb"><input type="button" id="sub" /></span>
+                    <span class="botton_xb"><input type="button" id="reg_sub" /></span>
                     <div class="clear"></div>
                 </div>
                 

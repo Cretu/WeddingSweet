@@ -66,11 +66,13 @@ public class Secure extends Controller {
         //检查用户记录
         User user = User.find("byEmailAndPassword",email,password).first();
         if(user==null){
+            Logger.info("用户["+email+"]尝试登陆系统失败");
             flash.error("登陆失败，请检查你的用户名或密码");
             flash.keep("url");
             redirect("/login");//将未登录跳转至用户登陆页面，不采用Secure提供的login页面
         }else {
             session.put("username",user.name);
+            Logger.info("用户["+controllers.Security.connected() + "] 已成功登陆");
             Home.index();
         }
     }
@@ -107,11 +109,12 @@ public class Secure extends Controller {
 
     public static void logout() throws Throwable {
         Security.invoke("onDisconnect");
+        String userName = controllers.Security.connected();
         session.clear();
         response.removeCookie("rememberme");
         Security.invoke("onDisconnected");
         flash.success("secure.logout");
-        Logger.info(controllers.Security.connected()+" 已成功退出");
+        Logger.info("用户["+userName+"] 已成功退出");
 
         redirect("/");
     }

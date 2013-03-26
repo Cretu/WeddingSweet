@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document   去除tpa正则/\*tpa=.*\*/  
 
-body{font-size:12px; color:#333; padding:0px; margin:0px; font-family:"微软雅黑,宋体";background-image:url("../images/index/pattern/pattern2.png");z-index: -255}
+body{font-size:12px; color:#333; padding:0px; margin:0px; font-family:"微软雅黑,宋体";}
 a{ text-decoration:none; color:#333;}
 a:hover{ text-decoration:underline; color:#f60;}
 ul{ margin:0px; padding:0px; list-style:none;}
