@@ -51,6 +51,7 @@ public class Common extends Controller{
         user.password = params.get("password");
         user.age = 0;
         user.name = "无名";
+		user.role = "user";
         user.save();
         redirect("/login");
     }
