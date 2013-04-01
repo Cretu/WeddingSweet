@@ -17,10 +17,10 @@
         <div class="top">
             <div class="top_left">
             #{if session.get("userID") != null}
-                亲，欢迎来到蜜婚网！ 您已经登陆 ${session.get("username")}<a href="@{Users.account()}">账户管理</a><a href="@{Users.logout()}">退出</a>
+                亲，欢迎来到蜜婚网！ 您已经登陆 ${session.get("username")}<a href="@{Users.account()}">账户管理</a><a href="/logout">退出</a>
             #{/if}
             #{else }
-                亲，欢迎来到蜜婚网！<a href="@{Users.register()}">注册</a><a href="@{Users.login}">登录</a>
+                亲，欢迎来到蜜婚网！<a href="/register">注册</a><a href="/login">登录</a>
             #{/else}
             </div>
             <ul class="top_right">

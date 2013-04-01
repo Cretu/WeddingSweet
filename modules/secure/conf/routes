@@ -2,6 +2,6 @@
 # *         /               module:secure
 # ~~~~
 
-GET			/login			Users.login
+GET			/login			Common.login
 POST        /login          Secure.authenticate
-GET         /logout         Secure.logout
+GET         /logout         Common.logout

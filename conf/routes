@@ -21,10 +21,12 @@ GET     /public/                                staticDir:public
 *     /admin           module:crud
 
 #login
-GET   /login           Users.login
+GET   /login           Common.login
+#logout
+GET   /logout          Common.logout
 #register
-*   /register        Users.register
-GET   /checkEmailExist       Users.checkEmailExist
+*   /register          Common.register
+GET   /checkEmailExist       Common.checkEmailExist
 
 #Captcha
 GET     /captcha             Common.captcha

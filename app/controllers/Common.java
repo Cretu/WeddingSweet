@@ -1,6 +1,8 @@
 package controllers;
 
+import models.User;
 import play.cache.Cache;
+import play.libs.Codec;
 import play.libs.Images;
 import play.mvc.Controller;
 
@@ -22,5 +24,41 @@ public class Common extends Controller{
     }
     public static void checkCaptcha(String captcha){
         renderText(Cache.get(session.get("captchaID")).toString().equalsIgnoreCase(captcha)?"true":"false");
+    }
+
+    public static void logout(){
+        try {
+            Secure.logout();
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+    public static void login(){
+        if (session.get("username")!= null){
+            Home.index();
+        }
+        render();
+    }
+
+    public static void register(){
+        String randomID = Codec.UUID();
+        render(randomID);
+    }
+
+    public static void regist(){
+        User user = new User();
+        user.email = params.get("email");
+        user.password = params.get("password");
+        user.age = 0;
+        user.name = "无名";
+        user.save();
+        redirect("/login");
+    }
+    public static void checkEmailExist(String email){
+        if(User.find("byEmail",email).first()!=null){
+            renderText("true");
+        }else {
+            renderText("false");
+        }
     }
 }
