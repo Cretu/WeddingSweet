@@ -1,23 +1,73 @@
-#{include 'header.html'/}
-</div> <!-- header end-->
-<div class="tabbable tabs-left">
-    <ul class="nav nav-tabs">
-        <li class="active"><a href="#lA" data-toggle="tab">Section 1</a></li>
-        <li><a href="#lB" data-toggle="tab">Section 2</a></li>
-        <li><a href="#lC" data-toggle="tab">Section 3</a></li>
-    </ul>
-    <div class="tab-content">
-        <div class="tab-pane active" id="lA">
-            <p>I'm in Section A.</p>
-        </div>
-        <div class="tab-pane" id="lB">
-            <p>Howdy, I'm in Section B.</p>
-        </div>
-        <div class="tab-pane" id="lC">
-            <p>What up girl, this is Section C.</p>
+#{extends 'main.html'/}
+<div id="container">
+    <link href="@{'/public/stylesheets/user.css'}"  rel="stylesheet" type="text/css">
+    <style type="text/css">
+        #leftmenu li:hover{background-color: #a52a2a;color: #f5f5f5}
+        #leftmenu li a{margin: 0 0;}
+        #leftmenu li a:hover{text-decoration: none;color: #f5f5f5}
+    </style>
+    <div id="position">
+        <a href="/" class="pos_now">首页</a> &gt; <a href="/account">我的帐户</a> &gt; ${activedMenu}
+    </div>
+
+    <div class="left">
+        <div class="leftmenu_ttl">我的帐户</div>
+        <div id="leftmenu">
+            <div class="sub_ttl">
+                <div class="st_title">账户中心<span></span></div>
+            </div>
+            <ul>
+                <li class="${activedMenu == '账户信息'?'on':''}"><a href="/user/setting.php">账户信息</a></li>
+                <li class="${activedMenu == '收货地址'?'on':''}"><a href="/user/address.php">收货地址</a></li>
+                <li class="${activedMenu == '修改密码'?'on':''}"><a href="/user/password.php">修改密码</a></li>
+            </ul>
+
+            <div class="sub_ttl">
+                <div class="st_title">交易中心<span></span></div>
+            </div>
+            <ul>
+                <li class="${activedMenu == '我的订单'?'on':''}"><a href="/user/">我的订单</a></li>
+                <li class="${activedMenu == '我的消费券'?'on':''}"><a href="/user/coupon/">我的消费券</a></li>
+                <li class="${activedMenu == '我的优惠券'?'on':''}"><a href="/user/card/">我的优惠券</a></li>
+                <li class="${activedMenu == '我的收藏'?'on':''}"><a href="/user/favorites/">我的收藏</a></li>
+                <li class="${activedMenu == '账户余额'?'on':''}"><a href="/user/credit.php">账户余额</a></li>
+                <li class="${activedMenu == '退款记录'?'on':''}"><a href="/user/refund/">退款记录</a></li>
+            </ul>
+
+            <div class="sub_ttl">
+                <div class="st_title">系统中心<span></span></div>
+            </div>
+            <ul>
+                <li><a href="#">系统信息</a></li>
+                <li><a href="#">邮件订阅</a></li>
+            </ul>
         </div>
     </div>
-</div> <!-- /tabbable -->
 
-#{doLayout /}
-#{include 'footer.html'/}
+
+   #{doLayout /}
+
+    <script type="text/javascript">
+        $(function($){
+            //动态为菜单设置为当前选中
+            alert（$('li'));
+            slide_li_width = $('#slide_content li').eq(0).width();
+            slide_ul_width = $('#slide_content li').length * slide_li_width;
+            scorll_len = slide_li_width*2;
+            len = 0;
+            $('#slide_content').css('width',slide_ul_width+'px');
+
+            $("#next").click(function(){
+                if(slide_ul_width > (len+scorll_len)){	len = scorll_len+len; }else{return;}
+                $('#slide_content').animate({left:-len+'px'},'slow');
+            });
+            $("#prev").click(function(){
+                if( len > 0){ len =  len-scorll_len;  }else{ return; }
+                $('#slide_content').animate({left:-len+'px'},'slow');
+            });
+        });
+    </script>
+
+    <div class="clear"></div>
+    ﻿</div>
+</div>

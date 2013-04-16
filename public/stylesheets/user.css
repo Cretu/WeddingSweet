@@ -501,3 +501,7 @@
 
 .account_tips {margin: 10px 0;padding: 10px 0;font-weight: bold;font-size: 14px;color: #f36;background: #FDF5E6;text-align: center;letter-spacing: 2px;} 
 .account_tips img {padding-right: 5px; vertical-align: text-bottom;}
+
+
+/*用户设置页面*/
+.accountsetting{width: 80%;height:340px;padding-left: 10%;}
