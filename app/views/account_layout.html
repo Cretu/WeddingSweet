@@ -2,9 +2,8 @@
 <div id="container">
     <link href="@{'/public/stylesheets/user.css'}"  rel="stylesheet" type="text/css">
     <style type="text/css">
-        #leftmenu li{padding: 0 0;}
         #leftmenu li:hover{background-color: #a52a2a;color: #f5f5f5}
-        #leftmenu li a{margin: 0 0;padding: 0 40px;}
+        #leftmenu li a{margin: 0 0;}
         #leftmenu li a:hover{text-decoration: none;color: #f5f5f5}
     </style>
     <div id="position">
@@ -18,21 +17,21 @@
                 <div class="st_title">账户中心<span></span></div>
             </div>
             <ul>
-                <li><a href="/account">账户信息</a></li>
-                <li><a href="/user/address">收货地址</a></li>
-                <li><a href="/users/changePwd">修改密码</a></li>
+                <li class="${activedMenu == '账户信息'?'on':''}"><a href="/user/setting.php">账户信息</a></li>
+                <li class="${activedMenu == '收货地址'?'on':''}"><a href="/user/address.php">收货地址</a></li>
+                <li class="${activedMenu == '修改密码'?'on':''}"><a href="/user/password.php">修改密码</a></li>
             </ul>
 
             <div class="sub_ttl">
                 <div class="st_title">交易中心<span></span></div>
             </div>
             <ul>
-                <li><a href="/user/">我的订单</a></li>
-                <li><a href="/user/coupon/">我的消费券</a></li>
-                <li><a href="/user/card/">我的优惠券</a></li>
-                <li><a href="/user/favorites/">我的收藏</a></li>
-                <li><a href="/user/credit">账户余额</a></li>
-                <li><a href="/user/refund/">退款记录</a></li>
+                <li class="${activedMenu == '我的订单'?'on':''}"><a href="/user/">我的订单</a></li>
+                <li class="${activedMenu == '我的消费券'?'on':''}"><a href="/user/coupon/">我的消费券</a></li>
+                <li class="${activedMenu == '我的优惠券'?'on':''}"><a href="/user/card/">我的优惠券</a></li>
+                <li class="${activedMenu == '我的收藏'?'on':''}"><a href="/user/favorites/">我的收藏</a></li>
+                <li class="${activedMenu == '账户余额'?'on':''}"><a href="/user/credit.php">账户余额</a></li>
+                <li class="${activedMenu == '退款记录'?'on':''}"><a href="/user/refund/">退款记录</a></li>
             </ul>
 
             <div class="sub_ttl">
@@ -51,12 +50,7 @@
     <script type="text/javascript">
         $(function($){
             //动态为菜单设置为当前选中
-            menuitems = $('#leftmenu li a');
-            for(x=0;x<menuitems.length;x++){
-                if($(menuitems[x]).html() == '${activedMenu}'){
-                    $(menuitems[x]).parent().addClass('on');
-                }
-            }
+            alert（$('li'));
             slide_li_width = $('#slide_content li').eq(0).width();
             slide_ul_width = $('#slide_content li').length * slide_li_width;
             scorll_len = slide_li_width*2;

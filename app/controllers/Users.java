@@ -27,9 +27,4 @@ public class Users extends CRUD {
         User user = User.findById(Long.valueOf(id));
         render(user);
     }
-    public static void changePwd(){
-        String id = session.get("userID");
-        User user = User.findById(Long.valueOf(id));
-        render(user);
-    }
 }

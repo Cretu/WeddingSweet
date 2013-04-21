@@ -130,7 +130,7 @@ textarea {outline: none;}
 						.footer_interests .tt2 {color:#333; margin-left:30px; line-height:40px;}
 						.footer_interests .tt2 span { display:block; float:left; width:93px; height:28px; background:url("../images/general/footer_tui.png") no-repeat; margin-right:10px;}
 						
-					.footer_about { border-top:1px solid #d8d8d8; margin-top:10px;}
+					.footer_about { border-top:1px solid #d8d8d8; margin-top:20px;}
 						.footer_about .tt1 { border-top:1px solid #fff;}
 							.footer_about .tt1 ul { margin-left:10px;}
 							.footer_about .tt1 ul li { float:left; margin-right:10px; list-style:none; color:#666666; line-height:24px;}
@@ -215,9 +215,7 @@ textarea {outline: none;}
 /* --------------- */
 
 #header_side{float:left; margin-bottom:10px;position: absolute;z-index:99;display:none;}
-	#header_side .h_nav{width:480px;border: 1px solid #71192b; border-top:6px solid #71192b; background:#f5f5f5;color: #add8e6;
-        opacity: .9;
-        filter: Alpha(opacity=90);}
+	#header_side .h_nav{width:480px; border-top:6px solid #71192b; background:#ffb6c1;color: #add8e6}
 		#header_side .h_nav ul{ border:1px solid #e3d6d9; border-top:none; padding:5px 20px;}
 		#header_side .h_nav li{ background:url("../images/general/general_ui.gif") 0px -154px repeat-x; height:36px; line-height:35px; overflow:hidden;}
 		#header_side .h_nav li .ttl{ display:inline-block; font-size:13px; font-weight:bold; color:#b80023; position:relative; padding-right:5px; margin-right:8px; font-family:"微软雅黑";}
