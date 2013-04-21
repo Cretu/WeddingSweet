@@ -1,1 +1,46 @@
 #{extends 'account_layout.html'/}
+#{set activedMenu:"账户信息"/}
+    <div class="user_main">
+
+        <!--
+            <div id="other_slide">
+                <div class="ttl">热门商品推荐：</div>
+
+                <div id="prev"><a href="javascript:void(0);"></a></div>
+                <div class="slide_main">
+                    <ul id="slide_content">
+                                </ul>
+                </div>
+                <div id="next"><a href="javascript:void(0);"></a></div>
+                <div class="clear"></div>
+            </div>
+         -->
+        <div class="main_ttl">我的订单</div>
+        <div class="main_form">
+
+            <ul id="order_tab">
+                <li ><a href="/user/">全部订单</a></li>
+                <li ><a href="/user/index.php?s=unpay">未付订单</a></li>
+                <li class="on"><a href="/user/index.php?s=pay">付款订单</a></li>
+            </ul>
+
+            <div class="order_list">
+                <table cellspacing="0" cellpadding="0" class="ttl">
+                    <tr>
+                        <td class="a">编号</td>
+                        <td class="b">订单商品</td>
+                        <td class="c">订单金额</td>
+                        <td class="e">状态</td>
+                        <td class="f">操作</td>
+                        <td class="g"></td>
+                    </tr>
+                </table>
+
+                <table cellspacing="1" cellpadding="0" class="content">
+                    <tr><td class="no_data" colspan="6">暂无数据</td>
+
+                </table>
+                <div class="notice">订单总数：<span>0</span>笔</div>
+            </div>
+        </div>
+    </div>

@@ -6,7 +6,30 @@
     <div class="ge_ttl"><span>登录蜜婚网</span></div>
         <div class="login_main">
         <div class="login_left">
-
+        #{if session.get("username")}
+            <!-- Modal -->
+            <div id="infoModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h3 id="myModalLabel">已经登陆，无需重复登陆</h3>
+                </div>
+                <div class="modal-body">
+                    <h4>你好:${session.get("username")}</h4>
+                    <h4>您已经成功登陆，无需重新登陆</h4>
+                    <h3 style="color: #8b0000"><div style="display: inline" id="timedown">3</div>秒后将自动跳转至主页。</h3>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-dismiss="modal" aria-hidden="true" onclick="location.href='/'">确定</button>
+                </div>
+            </div>
+            <script language="javascript" type="text/javascript">
+                $('#infoModal').modal('show');
+                setTimeout("timedown.innerHTML='2'",1000);
+                setTimeout("timedown.innerHTML='1'",2000);
+                setTimeout("timedown.innerHTML='0'",3000);
+                setTimeout("javascript:location.href='/'", 3000);
+            </script>
+        #{/if}
         #{if flash.error}
             <p class="error">
             &{flash.error}

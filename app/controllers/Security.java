@@ -77,8 +77,12 @@ public class Security extends Secure.Security {
         response.removeCookie("rememberme");
         flash.success("secure.logout");
         Logger.info("用户["+userName+"] 已成功退出");
-        redirect("/");
+        redirect("Home.index");
     }
 
+    static void onCheckFailed(String profile) {
+        flash.error("请登录系统后再查看本页面");
+        Common.login();
+    }
 
 }

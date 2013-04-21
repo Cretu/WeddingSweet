@@ -1,0 +1,153 @@
+#{extends 'account_layout.html'/}
+#{set activedMenu:"修改密码"/}
+<script type="text/javascript" src="@{'/public/bootstrap/js/messenger.min.js'}"></script>
+<link href="@{'/public/bootstrap/css/messenger.css'}"  rel="stylesheet" type="text/css">
+<link href="@{'/public/bootstrap/css/messenger-theme-block.css'}"  rel="stylesheet" type="text/css">
+<div class="user_main">
+    <div class="main_ttl">修改密码</div>
+        <div class="main_form">
+            <div><!--
+                <div class="alert fade in" id="info">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>`(*∩_∩*)′</strong> ${flash.get("info")}
+                </div>-->
+            #{if flash.contains("info")}
+
+                <script type="text/javascript">
+
+//                    $(".alert").alert();
+//                    $("#info").removeClass("invisible");
+//
+//                    setTimeout("$('.alert').alert('close');",2000)
+                </script>
+            #{/if}
+            </div>
+            <form action="@{Users.doChangePwd()}" method="post" id="m_form">
+                <div class="cipher">
+                    <div class="cipher_a">
+                        <span class="cipher_name">账户邮箱：</span>
+                        <span><input type="text" disabled="disabled" value="${user.email}" /></span>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="cipher_a" id="old_pwd">
+                        <span class="cipher_name">旧密码：</span>
+                        <span><input type="password" id="old_password" name="old_password" /></span>
+                        <span class="cipher_more">请输入旧密码！</span>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="cipher_a" id="new_pwd">
+                        <span class="cipher_name">新密码：</span>
+                        <span><input type="password" id="password" name="password" maxlength="16" /></span>
+                        <span class="cipher_more">密码为由英文、数字及“_”“-”组成的6-16为字符！</span>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="cipher_a" id="con_pwd">
+                        <span class="cipher_name">重复新密码：</span>
+                        <span><input type="password" id="password1" name="password1" /></span>
+                        <span class="cipher_more">重复新密码必须和新密码一致！</span>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="cipher_modify"><input type="button" id="sub" /></div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function check_input(form,msg){
+        if(msg == null){
+            $(form).parent().siblings('.cipher_more').html('<font color="green">正确</font>');
+            //flag = true;
+        }else{
+            //flag = false;
+            //$(form).parents('.login_list').children('.account_error').remove();
+            $(form).parent().siblings('.cipher_more').html('<font color="red">'+msg+'</font>');
+            //$(form).parents('.login_list').append('<div class="account_error">'+msg+'</div>');
+        }
+    }
+    function error_shake(id){
+        $(id).stop().css('backgroundColor','red').fadeTo(500,0,function(){$(id).removeAttr('style');});
+    }
+
+    $(document).ready(function(){
+        var old_pwd_flag = false;
+        var new_pwd_flag = false;
+        var con_pwd_flag = false;
+
+        /*验证旧密码*/
+        $('#old_password').blur(function(){
+            var old_password = $(this).val();
+            var ajx_url = "@{Users.checkOldPwd()}";
+            $.ajaxSetup({ async : true });
+            $.post(ajx_url,{pwd:old_password},function(msg){
+                if(msg == 'false'){
+                    old_pwd_flag = false;
+                    $('#old_password').parent().siblings('.cipher_more').html('<font color="red">原始密码错误！</font>');
+                }else{
+                    $('#old_password').parent().siblings('.cipher_more').html('<font color="green">正确</font>');
+                    old_pwd_flag = true;
+                }
+            });
+        });
+        /*验证密码1*/
+        $('#password').blur(function(){
+            if($(this).val().length < 6){
+                new_pwd_flag = false;
+                check_input($(this),'密码长度不能少于6位！');
+            }else{
+                new_pwd_flag = true;
+                check_input($(this));
+            }
+        });
+
+        /*验证密码2*/
+        $('#password1').blur(function(){
+            if($(this).val().length < 6 || $(this).val() != $('#password').val()){
+                check_input($(this),'两次密码输入不一致！');
+                con_pwd_flag = false;
+            }else{
+                con_pwd_flag = true;
+                check_input($(this));
+            }
+        });
+        $('#sub').click(function(){
+            $('#m_form input').each(function(){
+                $(this).trigger('blur');
+            });
+            if(!old_pwd_flag){
+                error_shake("#old_pwd input");
+            }
+            if(!new_pwd_flag){
+                error_shake("#new_pwd input");
+            }
+            if(!con_pwd_flag){
+                error_shake("#con_pwd input");
+            }
+            if(old_pwd_flag&&new_pwd_flag&&con_pwd_flag){
+                //$("#m_form").submit();
+                var password = $("#password").val();
+                var ajx_url = "@{Users.doChangePwd()}";
+                $.ajaxSetup({ async : true });
+                $.post(ajx_url,{password:password},function(msg){
+                    $._messengerDefaults = {
+                        extraClasses: 'messenger-theme-block messenger-fixed messenger-on-top',
+                        parentLocations:['div.main_form']
+                    }
+                    $.globalMessenger().post({
+                        message:msg,
+                        type:'success',
+                        showCloseButton:true
+                        //scrollTo: true,
+                        //id:'pwd_changed_success'
+                    });
+                    //$(".alert").alert();
+                    //setTimeout("$('.alert').alert('close');",2000);
+                });
+            }
+        });
+    });
+</script>

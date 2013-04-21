@@ -111,11 +111,11 @@ textarea {outline: none;}
 /* --------------- */
 			
 			#footer { width:1180px; margin:10px auto 0 auto; border-top:1px solid #d8d8d8; font-size:12px;}
-				.footer_all { margin-top:1px; padding-top:20px; background:#f4f4f4;}
-					.footer_phone { float:left; padding:13px 55px 13px 38px; border-right:1px solid #d8d8d8;}
+				.footer_all { margin-top:1px; padding-top:10px; background:#f4f4f4;}
+					.footer_phone { float:left; padding:13px 55px 5px 38px; border-right:1px solid #d8d8d8;}
 						.footer_phone .tt1 { width:160px; height:85px; background:url("../images/general/footer_phone.png") no-repeat;}
 						
-					.footer_help { float:left; border-left:1px solid #FFF; border-right:1px solid #d8d8d8; padding:9px 50px;}
+					.footer_help { float:left; border-left:1px solid #FFF; border-right:1px solid #d8d8d8; padding:5px 50px;}
 						.footer_help ul { float:left; margin-right:90px; text-align:left;}
 						.footer_help .business { float:left; margin:0;}
 						.footer_help ul li { list-style:none; font-size:12px; color:#666666; line-height:24px;}
@@ -130,7 +130,7 @@ textarea {outline: none;}
 						.footer_interests .tt2 {color:#333; margin-left:30px; line-height:40px;}
 						.footer_interests .tt2 span { display:block; float:left; width:93px; height:28px; background:url("../images/general/footer_tui.png") no-repeat; margin-right:10px;}
 						
-					.footer_about { border-top:1px solid #d8d8d8; margin-top:20px;}
+					.footer_about { border-top:1px solid #d8d8d8; margin-top:10px;}
 						.footer_about .tt1 { border-top:1px solid #fff;}
 							.footer_about .tt1 ul { margin-left:10px;}
 							.footer_about .tt1 ul li { float:left; margin-right:10px; list-style:none; color:#666666; line-height:24px;}
@@ -215,7 +215,9 @@ textarea {outline: none;}
 /* --------------- */
 
 #header_side{float:left; margin-bottom:10px;position: absolute;z-index:99;display:none;}
-	#header_side .h_nav{width:480px; border-top:6px solid #71192b; background:#ffb6c1;color: #add8e6}
+	#header_side .h_nav{width:480px;border: 1px solid #71192b; border-top:6px solid #71192b; background:#f5f5f5;color: #add8e6;
+        opacity: .9;
+        filter: Alpha(opacity=90);}
 		#header_side .h_nav ul{ border:1px solid #e3d6d9; border-top:none; padding:5px 20px;}
 		#header_side .h_nav li{ background:url("../images/general/general_ui.gif") 0px -154px repeat-x; height:36px; line-height:35px; overflow:hidden;}
 		#header_side .h_nav li .ttl{ display:inline-block; font-size:13px; font-weight:bold; color:#b80023; position:relative; padding-right:5px; margin-right:8px; font-family:"微软雅黑";}

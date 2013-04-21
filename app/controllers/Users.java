@@ -27,4 +27,29 @@ public class Users extends CRUD {
         User user = User.findById(Long.valueOf(id));
         render(user);
     }
+    @Check("user")
+    public static void changePwd(){
+        String id = session.get("userID");
+        User user = User.findById(Long.valueOf(id));
+        render(user);
+    }
+    @Check("user")
+    public static String doChangePwd(){
+        String id = session.get("userID");
+        User user = User.findById(Long.valueOf(id));
+        user.password = params.get("password");
+        String info = null;
+        try {
+            user.save();
+            info = "密码修改成功";
+        }catch (Exception e){
+            info = e.getLocalizedMessage()+"密码修改失败";
+        }
+        return info;
+    }
+    @Check("user")
+    public static String checkOldPwd(String pwd){
+        Long id = Long.valueOf(session.get("userID"));
+        return User.find("byIdAndPassword",id,pwd).first()==null?"false":"true";
+    }
 }

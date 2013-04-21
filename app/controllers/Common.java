@@ -34,9 +34,9 @@ public class Common extends Controller{
         }
     }
     public static void login(){
-        if (session.get("username")!= null){
-            Home.index();
-        }
+//        if (session.get("username")!= null){
+//            Home.index();
+//        }//取消，由页面进行处理并跳转
         render();
     }
 
