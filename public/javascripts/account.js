@@ -75,7 +75,7 @@ $(function(){
         }
     });
 
-    /*验证密码1*/
+    /*验证密码2*/
     $('#password1').blur(function(){
         if($(this).val().length < 6 || $(this).val() != $('#password').val()){
             check_input($(this),'两次密码输入不一致！');

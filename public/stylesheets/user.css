@@ -42,9 +42,9 @@
 		    .botton { margin:20px 0 20px 106px;}
 		    .botton span { display:block;  margin-right:5px;}
 				.botton .botton_xz { margin-left:60px;}
-				.botton .botton_xz input { width:97px; height:35px; background:url("../images/user/login_button.gif")/*tpa=http://www.360hun.com/static/images/user/login_button.gif*/ no-repeat; border:none; cursor: pointer;}
+				.botton .botton_xz input { width:97px; height:35px; background:url("../images/user/login_button.gif") no-repeat; border:none; cursor: pointer;}
 				.botton .botton_xb {}
-				.botton .botton_xb input {cursor: pointer; width:118px; height:35px; background:url("../images/user/login_zc.gif")/*tpa=http://www.360hun.com/static/images/user/login_zc.gif*/ no-repeat; border:none;}
+				.botton .botton_xb input {cursor: pointer; width:118px; height:35px; background:url("../images/user/login_zc.gif") no-repeat; border:none;}
 				.botton .botton_xx { margin-top:15px;}
 				.botton .botton_xx a { color:#ff6600; }
 			
@@ -52,15 +52,15 @@
 
 /*			.list_tips {padding-top: 5px;color: #ADADAD;margin-left: 90px;}*/
 			.login .account_notice {color: red;background: #FFE8E8;line-height: 22px;border: 1px solid #DB9A9A;margin: 10px;padding: 5px;font-weight: bold;}
-			.login .account_notice span {padding-right:10px; vertical-align: sub;background: url("../images/user/account_no.gif")/*tpa=http://www.360hun.com/static/images/user/account_no.gif*/ no-repeat;width: 14px;height: 14px;display: inline-block;}
+			.login .account_notice span {padding-right:10px; vertical-align: sub;background: url("../images/user/account_no.gif") no-repeat;width: 14px;height: 14px;display: inline-block;}
 
  	.login_more { width:500px;}
 			.login_more .botton2 { margin:20px 0px 20px 22px; padding-left:85px;}
 			.login_more .botton2 span { display:block;}
 				.botton2 .botton_xz { margin-left:0px;}
-				.botton2 .botton_xz input { width:97px; height:35px; background:url("../images/user/login_button.gif")/*tpa=http://www.360hun.com/static/images/user/login_button.gif*/ no-repeat; border:none; cursor: pointer;}
+				.botton2 .botton_xz input { width:97px; height:35px; background:url("../images/user/login_button.gif") no-repeat; border:none; cursor: pointer;}
 				.botton2 .botton_xb { margin-left:0px; }
-				.botton2 .botton_xb input {cursor: pointer; width:118px; height:35px; background:url("../images/user/login_zc.gif")/*tpa=http://www.360hun.com/static/images/user/login_zc.gif*/ no-repeat; border:none;}
+				.botton2 .botton_xb input {cursor: pointer; width:118px; height:35px; background:url("../images/user/login_zc.gif") no-repeat; border:none;}
 				.botton2 .botton_xx {width: 250px;line-height: 24px;}
 				.botton2 .botton_xx a { color:#ff6600; }
 				
@@ -69,15 +69,15 @@
 			.login_more_vv span { display:block; float:left; margin:8px 8px 0 0;; border-right:1px solid #CCC; color:#005AA0;}
 			
 			.login_more_vv span a { display:block; padding:1px 5px 1px 18px; color:#9c9c9c;}
-			.login_more_vv span .login_qq { background:url("../images/user/login_qq.gif")/*tpa=http://www.360hun.com/static/images/user/login_qq.gif*/ no-repeat;}
-			.login_more_vv span .login_zfb { background:url("../images/user/login_zfb.gif")/*tpa=http://www.360hun.com/static/images/user/login_zfb.gif*/ no-repeat;}
-			.login_more_vv span .login_xl  { background:url("../images/user/login_xl.gif")/*tpa=http://www.360hun.com/static/images/user/login_xl.gif*/ no-repeat;}
-			.login_more_vv span .login_360 { background:url("../images/user/login_360.gif")/*tpa=http://www.360hun.com/static/images/user/login_360.gif*/ no-repeat;}
-			.login_more_vv span .login_tuan { background:url("../images/user/login_tuan.gif")/*tpa=http://www.360hun.com/static/images/user/login_tuan.gif*/ no-repeat;}
+			.login_more_vv span .login_qq { background:url("../images/user/login_qq.gif") no-repeat;}
+			.login_more_vv span .login_zfb { background:url("../images/user/login_zfb.gif") no-repeat;}
+			.login_more_vv span .login_xl  { background:url("../images/user/login_xl.gif") no-repeat;}
+			.login_more_vv span .login_360 { background:url("../images/user/login_360.gif") no-repeat;}
+			.login_more_vv span .login_tuan { background:url("../images/user/login_tuan.gif") no-repeat;}
 			.login_more_vv .login_tt { border:none;}
 			
 	.login_right { float:right; width:426px; height:351px;}
-	.registration_right { float:left; width:421px; height:641px; background:url("../images/user/login_bg.jpg")/*tpa=http://www.360hun.com/static/images/user/login_bg.jpg*/ no-repeat;}
+	.registration_right { float:left; width:421px; height:641px; background:url("../images/user/login_bg.jpg") no-repeat;}
 	.registration_gg { margin-top:20px;border-top:1px dotted #CCC;}
 	#readme { padding:20px 0 0 101px; }
 	#readme span { display:block; float:left; line-height:18px; color:#666666;}
@@ -87,12 +87,12 @@
 /* --------------- */
 
 .left{width:160px;float:left;}
-	.leftmenu_ttl{ width:148px; height:33px; background:url("../images/user/left_menu_a.gif")/*tpa=http://www.360hun.com/static/images/user/left_menu_a.gif*/ no-repeat; line-height:33px; padding-left:12px; font-size:14px; font-weight:bold; color:#FFF;} 
+	.leftmenu_ttl{ width:148px; height:33px; background:url("../images/user/left_menu_a.gif") no-repeat; line-height:33px; padding-left:12px; font-size:14px; font-weight:bold; color:#FFF;} 
 	#leftmenu{ border:1px solid #ddd; border-top:none;}
 
 	.sub_ttl{height:31px;line-height:31px; border-top:1px solid #dddddd;  border-bottom:1px solid #dddddd; padding:1px;}
 		.st_title{background:#f1f1f1;font-size:14px; font-weight:bold; padding-left:10px; position:relative;}
-		.st_title span { position:absolute; right:10px; top:7px; display:block;width:15px; height:15px; float:right; background:url("../images/user/left_menu_b.png")/*tpa=http://www.360hun.com/static/images/user/left_menu_b.png*/ no-repeat; }
+		.st_title span { position:absolute; right:10px; top:7px; display:block;width:15px; height:15px; float:right; background:url("../images/user/left_menu_b.png") no-repeat; }
 
 	#leftmenu ul{ padding:5px 0px;}
 	#leftmenu li { height:25px;line-height:25px; padding-left:20px;}
@@ -103,15 +103,15 @@
 /* --------------- */
 .user_main{ width:1010px; float:right;}
 .main_ttl{ border:1px solid #ddd; background:#f5f5f5;height:30px; color:#dd0000; font-size:14px; font-weight:bold; line-height:30px; padding-left:10px;}
-.main_form{ border:1px solid #ddd; border-top:none; padding:10px 20px; margin-bottom:10px;}
+.main_form{ border:1px solid #ddd; border-top:none; padding:10px 20px; margin-bottom:10px;position: relative;}
 
-#other_slide{border:1px solid #ebd7cd; background:#fefaf4 url("../images/user/hot.gif")/*tpa=http://www.360hun.com/static/images/user/hot.gif*/ no-repeat; position:relative; overflow:hidden; padding-bottom:10px; margin-bottom:10px;}
+#other_slide{border:1px solid #ebd7cd; background:#fefaf4 url("../images/user/hot.gif") no-repeat; position:relative; overflow:hidden; padding-bottom:10px; margin-bottom:10px;}
 	#other_slide .ttl{height:32px; line-height:32px; padding-left:45px; font-size:14px; font-weight:bold; color:#990000; margin-bottom:5px;}
 
 	#prev{ float:left; position:absolute; left:10px; top:43px;}
-	#prev a{ display:block; width:32px; height:45px; background:url("../images/user/form_left_arrow.gif")/*tpa=http://www.360hun.com/static/images/user/form_left_arrow.gif*/ no-repeat;}
+	#prev a{ display:block; width:32px; height:45px; background:url("../images/user/form_left_arrow.gif") no-repeat;}
 	#next{ float:left; position:absolute; right:10px; top:43px;}
-	#next a{ display:block; width:32px; height:45px; background:url("../images/user/form_right_arrow.gif")/*tpa=http://www.360hun.com/static/images/user/form_right_arrow.gif*/ no-repeat;}
+	#next a{ display:block; width:32px; height:45px; background:url("../images/user/form_right_arrow.gif") no-repeat;}
 
 	#slide_content{overflow:hidden; position:relative; margin:0px 50px;height:65px;}
 		#slide_content ul{ position:absolute; left:0; top:0; width:1800px;}
@@ -125,7 +125,7 @@
 	#order_tab { border-bottom:2px solid #fc0000; overflow:hidden;}
 		#order_tab li { float:left; height:25px; line-height:25px; padding:0 10px; margin-right:2px; border:1px solid #dddddd; border-bottom:none;}
 		#order_tab li a { text-decoration:none;} 
-		#order_tab .on { height:26px; background:url("../images/user/tab_bg.gif")/*tpa=http://www.360hun.com/static/images/user/tab_bg.gif*/ bottom repeat-x; border:1px solid #ffb1b1; border-bottom:none; color:dd0000; font-weight:bold;}
+		#order_tab .on { height:26px; background:url("../images/user/tab_bg.gif") bottom repeat-x; border:1px solid #ffb1b1; border-bottom:none; color:dd0000; font-weight:bold;}
 		#order_tab .on a { color:#dc2756;}
 
 	.order_list{ margin-bottom:10px;}
@@ -138,7 +138,7 @@
 	.order_list td.e{width:10%; text-align:center;}
 	.order_list td.f{width:10%; text-align:center;}
 	
-	.order_list .ttl { height:32px; background:url("../images/user/form_02.gif")/*tpa=http://www.360hun.com/static/images/user/form_02.gif*/ repeat-x; line-height:32px; border:1px solid #ddd; border-bottom:none;}
+	.order_list .ttl { height:32px; background:url("../images/user/form_02.gif") repeat-x; line-height:32px; border:1px solid #ddd; border-bottom:none;}
 	.order_list .content{ background:#ddd;}
 	.order_list .content td{ background:#fff; padding:5px 5px; line-height:18px;}
 	.order_list .content td span{ color:#aaa;}
@@ -163,7 +163,7 @@
 	.order_detail td.d{width:10%; text-align:center;}
 	.order_detail td.e{width:10%; text-align:center;}
 	.order_detail td.f{width:12%; text-align:center;}
-	.order_detail .ttl { height:32px; background:url("../images/user/form_02.gif")/*tpa=http://www.360hun.com/static/images/user/form_02.gif*/ repeat-x; line-height:32px; border:1px solid #ddd; border-bottom:none;}
+	.order_detail .ttl { height:32px; background:url("../images/user/form_02.gif") repeat-x; line-height:32px; border:1px solid #ddd; border-bottom:none;}
 	.order_detail .content{ background:#ddd;}
 	.order_detail .content td{ background:#fff; padding:5px 5px; line-height:18px;}
 	.order_detail .content td span{ color:#aaa;}
@@ -190,7 +190,7 @@
 	.coupon_list td.b{width:20%; text-align:center;}
 	.coupon_list td.c{width:10%; text-align:center;}
 	
-	.coupon_list .ttl { height:32px; background:url("../images/user/form_02.gif")/*tpa=http://www.360hun.com/static/images/user/form_02.gif*/ repeat-x; line-height:32px; border:1px solid #ddd; border-bottom:none;}
+	.coupon_list .ttl { height:32px; background:url("../images/user/form_02.gif") repeat-x; line-height:32px; border:1px solid #ddd; border-bottom:none;}
 	.coupon_list .content{ background:#ddd;}
 	.coupon_list .content td{ background:#fff; padding:5px 5px; line-height:18px;}
 	.coupon_list .content td span{ color:#aaa;}
@@ -211,7 +211,7 @@
 	.fav_list td.c{width:8%; text-align:center;}
 	.fav_list td.d{width:8%; text-align:center;}
 	
-	.fav_list .ttl { height:32px; background:url("../images/user/form_02.gif")/*tpa=http://www.360hun.com/static/images/user/form_02.gif*/ repeat-x; line-height:32px; border:1px solid #ddd; border-bottom:none;}
+	.fav_list .ttl { height:32px; background:url("../images/user/form_02.gif") repeat-x; line-height:32px; border:1px solid #ddd; border-bottom:none;}
 	.fav_list .content{ background:#ddd;}
 	.fav_list .content td{ background:#fff; padding:5px 5px; line-height:18px;}
 	.fav_list .content td span{ color:#aaa;}
@@ -231,7 +231,7 @@
 	.cash_list td.c{width:20%; text-align:center;}
 	.cash_list td.d{width:20%; text-align:center;}
 	
-	.cash_list .ttl { height:32px; background:url("../images/user/form_02.gif")/*tpa=http://www.360hun.com/static/images/user/form_02.gif*/ repeat-x; line-height:32px; border:1px solid #ddd; border-bottom:none;}
+	.cash_list .ttl { height:32px; background:url("../images/user/form_02.gif") repeat-x; line-height:32px; border:1px solid #ddd; border-bottom:none;}
 	.cash_list .content{ background:#ddd;}
 	.cash_list .content td{ background:#fff; padding:5px 5px; line-height:18px;}
 	.cash_list .content td span{ color:#aaa;}
@@ -245,7 +245,7 @@
 /*refund开始*/	
 
 .refund_content { margin-top:10px; padding:20px; border:1px solid #e7cec1;}
-	.refund_basic { padding:0 20px 20px 20px; background:url("../images/user/refund_dian.gif")/*tpa=http://www.360hun.com/static/images/user/refund_dian.gif*/ repeat-x bottom;}
+	.refund_basic { padding:0 20px 20px 20px; background:url("../images/user/refund_dian.gif") repeat-x bottom;}
 	.refund_basic1 { padding:0 20px 20px 20px;}
 	
 	.refund_number span { display:block; float:left; line-height:20px; margin-right:3px;}
@@ -274,7 +274,7 @@
 	.refund_number3 .number { display:block; font-weight:bold; text-align:right; width:90px;}
 	.refund_number3 span input { width:132px; height:19px; border:1px solid #7f9db9;}
 	
-	.refund_tj input { width:90px; height:29px; background:url("../images/user/refund_yes.gif")/*tpa=http://www.360hun.com/static/images/user/refund_yes.gif*/ no-repeat; border:none; margin-left:92px;}
+	.refund_tj input { width:90px; height:29px; background:url("../images/user/refund_yes.gif") no-repeat; border:none; margin-left:92px;}
 
 
 /*refund结束*/
@@ -282,9 +282,9 @@
 
 /*reecord开始*/
 
-.record { height:32px; background:url("../images/user/form_02.gif")/*tpa=http://www.360hun.com/static/images/user/form_02.gif*/ repeat-x; line-height:32px; border-bottom:1px solid #EBEBEB;}
+.record { height:32px; background:url("../images/user/form_02.gif") repeat-x; line-height:32px; border-bottom:1px solid #EBEBEB;}
 	.record ul li { float:left; text-align:center; color:#333;}
-			.record ul .qa { width:20px; height:32px; background:url("../images/user/form_02.gif")/*tpa=http://www.360hun.com/static/images/user/form_02.gif*/ repeat-x; }
+			.record ul .qa { width:20px; height:32px; background:url("../images/user/form_02.gif") repeat-x; }
 			.record ul .qs { width:140px;}
 			.record ul .qd { width:160px;}
 			.record ul .qf { width:160px;}
@@ -304,7 +304,7 @@
 			.record_list ul .qj { width:112px;}
 			.record_list ul .ql { width:131px; color:#00b22e; font-weight:bold; text-decoration:underline;}
 			
-	.form_list_s { height:32px; background:url("../images/user/form_02.gif")/*tpa=http://www.360hun.com/static/images/user/form_02.gif*/ repeat-x; border-top:1px solid #ececec; border-top-bottom:1px solid #ececec; border-top:none;}
+	.form_list_s { height:32px; background:url("../images/user/form_02.gif") repeat-x; border-top:1px solid #ececec; border-top-bottom:1px solid #ececec; border-top:none;}
 	
 	.form_list_v { line-height:30px; text-align:right; padding-right:10px;}
 	.form_list_v span { color:#ff0000;}
@@ -331,7 +331,7 @@
 	.receipt_a .checkbox { width:14px; height:14px; margin:0; padding:0; margin-top:5px;}
 	
 	.receipt_add { margin:20px 0 40px 290px;}
-	.receipt_add input { width:90px; height:28px; background:url("../images/user/receipt_button.gif")/*tpa=http://www.360hun.com/static/images/user/receipt_button.gif*/ no-repeat; border:none;}
+	.receipt_add input { width:90px; height:28px; background:url("../images/user/receipt_button.gif") no-repeat; border:none;}
 	.receipt input { width:90px; height:28px; border:none;}
 	.receipt_preser { margin:0 10px; height:30px;  color:#ff9900; font-weight:bold; border:1px solid #ececec; line-height:30px; text-align:center; margin-bottom:10px;}
 	
@@ -358,7 +358,7 @@
 
 /*cipher开始*/
 
-.cipher { margin-top:30px;}
+.cipher { margin-top:30px;height: 325px;}
 	.cipher_a { width:450px; margin:0 auto;}
 	.cipher_a span { display:block; float:left; line-height:30px; margin-right:5px; }
 	.cipher_a span input { width:320px; height:30px; border:1px solid #ddd; line-height:30px;} 
@@ -366,7 +366,7 @@
 	.cipher_more {margin:-5px 0 5px 0px; color:#adadad; width:320px; padding-left:85px;}
 
 	.cipher_modify { margin:20px 0 300px 345px;}
-	.cipher_modify input { width:90px; height:28px; background:url("../images/user/cipher_modify.gif")/*tpa=http://www.360hun.com/static/images/user/cipher_modify.gif*/ no-repeat; border:none;}
+	.cipher_modify input { width:90px; height:28px; background:url("../images/user/cipher_modify.gif") no-repeat; border:none;}
 
 /*cipher结束*/
 
@@ -381,7 +381,7 @@
 	.modify_list ul .bx { color:#999999; margin-top:8px; width:430px;}
 	.modify_list ul .bc { width:150px; text-align:center; margin-top:8px;}
 	.modify_list ul .bv { width:150px; text-align:center; margin-top:8px;}
-	.modify_list ul .bv input { width:73px; height:25px; background:url("../images/user/modify_yz.gif")/*tpa=http://www.360hun.com/static/images/user/modify_yz.gif*/ no-repeat; border:none;}
+	.modify_list ul .bv input { width:73px; height:25px; background:url("../images/user/modify_yz.gif") no-repeat; border:none;}
 	.modify_list ul .bc a { color:#005ea7;}
 	
 	.modify_list1 { padding:30px 0; border:1px solid #e6e6e6;}
@@ -391,7 +391,7 @@
 	.modify_list1 ul .bx { color:#999999; margin-top:8px; width:430px;}
 	.modify_list1 ul .bc { width:150px; text-align:center; margin-top:8px;}
 	.modify_list1 ul .bv { width:150px; text-align:center; margin-top:8px;}
-	.modify_list1 ul .bv input { width:73px; height:25px; background:url("../images/user/modify_yz.gif")/*tpa=http://www.360hun.com/static/images/user/modify_yz.gif*/ no-repeat; border:none;}
+	.modify_list1 ul .bv input { width:73px; height:25px; background:url("../images/user/modify_yz.gif") no-repeat; border:none;}
 	.modify_list1 ul .bc a { color:#005ea7;}
 
 	
@@ -404,10 +404,10 @@
 	.recharge p span { font-weight:bold;} 
 	.recharge p .rmb { font-weight:bold; color:#F00;} 
 	
-	.form_list_h { padding:9px 0 9px 10px; background:url("../images/user/form_02.gif")/*tpa=http://www.360hun.com/static/images/user/form_02.gif*/ repeat-x; border:1px solid #ececec; font-weight:bold; color:#1d8ea3;}
+	.form_list_h { padding:9px 0 9px 10px; background:url("../images/user/form_02.gif") repeat-x; border:1px solid #ececec; font-weight:bold; color:#1d8ea3;}
 	
 .recharge_mode { border:1px solid #ececec; border-top:none; padding:30px 0 150px 30px;}
-	.recharge_two { padding-bottom:30px; background:url("../images/user/recharge_dian.gif")/*tpa=http://www.360hun.com/static/images/user/recharge_dian.gif*/ repeat-x bottom; margin-right:30px;}
+	.recharge_two { padding-bottom:30px; background:url("../images/user/recharge_dian.gif") repeat-x bottom; margin-right:30px;}
 	
 	.recharge_fzb { float:left; margin-right:20px;}
 	.recharge_fzb span { display:block; float:left; margin:10px 5px 0 0;}
@@ -417,7 +417,7 @@
 	.recharge_money {}
 	.recharge_small { color:#666666;}
 	.recharge_small input { width:150px; height:18px; border:1px solid #7f9db9; color:#666666; maigin-right:5px;}
-	.recharge_button input { width:74px; height:28px; background:url("../images/user/recharge_now.gif")/*tpa=http://www.360hun.com/static/images/user/recharge_now.gif*/ no-repeat; border:none; margin-top:20px;}
+	.recharge_button input { width:74px; height:28px; background:url("../images/user/recharge_now.gif") no-repeat; border:none; margin-top:20px;}
 		
 /*recharge结束*/		
 		
@@ -467,7 +467,7 @@
 	.account_list1 span input { width:268px; height:28px; border:1px solid #cdcdcd;}
 	
 	.account_tj { width:968px;  border-bottom:1px solid #DDD; margin-bottom:30px;}
-	.account_tj input {cursor:pointer; width:90px; height:28px; background:url("../images/user/account_button.gif")/*tpa=http://www.360hun.com/static/images/user/account_button.gif*/ no-repeat; border:none; margin:10px 0px 25px 341px;}			
+	.account_tj input {cursor:pointer; width:90px; height:28px; background:url("../images/user/account_button.gif") no-repeat; border:none; margin:10px 0px 25px 341px;}			
 		
 /*account结束*/
 
@@ -479,10 +479,10 @@
 .balance_expire { padding-left:10px; color:#F00; background:none;}
 
 .balance_button { margin:0 0 30px 10px;}
-.balance_button input { width:74px; height:28px; background:url("../images/user/recharge_now.gif")/*tpa=http://www.360hun.com/static/images/user/recharge_now.gif*/ no-repeat; border:none;}
+.balance_button input { width:74px; height:28px; background:url("../images/user/recharge_now.gif") no-repeat; border:none;}
 
 
-.balance_list { height:32px; background:url("../images/user/form_02.gif")/*tpa=http://www.360hun.com/static/images/user/form_02.gif*/ repeat-x; line-height:32px;}
+.balance_list { height:32px; background:url("../images/user/form_02.gif") repeat-x; line-height:32px;}
 	.balance_list ul li { float:left; text-align:center; color:#666666;}
 	.balance_list ul .zz { width:202px;}
 	.balance_list ul .zx { width:210px;}
