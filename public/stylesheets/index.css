@@ -104,15 +104,15 @@
 			
 			
 
-.f01{}
-	.f01 .ttl{ background:#ff003c;}
-	.f01 .tab{ border-top:3px solid #ff003c;}
-	.f01 .tab li.on a{color: #ff003c;}
-
 .f02{}
-	.f02 .ttl{ background:#ff003c;}
-	.f02 .tab{ border-top:3px solid #ff003c;}
-	.f02 .tab li.on a{color: #ff003c;}
+	.f02 .ttl{ background:#ff0000;}
+	.f02 .tab{ border-top:3px solid #ff0000;}
+	.f02 .tab li.on a{color: #ff0000;}
+
+.f01{}
+	.f01 .ttl{ background: #3697e6;}
+	.f01 .tab{ border-top:3px solid #3697e6;}
+	.f01 .tab li.on a{color: #3697e6;}
 
 .f03{}
 	.f03 .ttl{ background:#ffb500;}
