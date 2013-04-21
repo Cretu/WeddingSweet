@@ -97,7 +97,8 @@
 	#leftmenu ul{ padding:5px 0px;}
 	#leftmenu li { height:25px;line-height:25px; padding-left:20px;}
 	#leftmenu li a { color:#333;}
-	#leftmenu li.on a { color:#F00; font-weight:bold;}
+    #leftmenu li.on{background-color: #a52a2a;}
+	#leftmenu li.on a { color:#f5f5f5; font-weight:bold;}
 	
 /* --------------- */
 .user_main{ width:1010px; float:right;}
