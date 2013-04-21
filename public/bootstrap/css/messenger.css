@@ -20,7 +20,7 @@ ul.messenger .messenger-message.messenger-hidden {
 }
 /* line 20, ../../src/sass/messenger.sass */
 ul.messenger .messenger-message .messenger-phrase, ul.messenger .messenger-message .messenger-actions a {
-  padding-right: 5px;
+  padding-right: 0px;
 }
 /* line 23, ../../src/sass/messenger.sass */
 ul.messenger .messenger-message .messenger-actions {
@@ -33,7 +33,7 @@ ul.messenger .messenger-message .messenger-actions a {
 }
 /* line 30, ../../src/sass/messenger.sass */
 ul.messenger.messenger-fixed {
-  position: relative;
+  position: fixed;
   z-index: 10000;
 }
 /* line 34, ../../src/sass/messenger.sass */

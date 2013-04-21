@@ -6,21 +6,19 @@
 <div class="user_main">
     <div class="main_ttl">修改密码</div>
         <div class="main_form">
-            <div>
-            #{if flash.contains("success")}
-                <script type="text/javascript">
-                    $._messengerDefaults = {
-                        extraClasses: 'messenger-theme-block messenger-fixed  messenger-on-top',
-                        parentLocations:['div.main_form']
-                    }
-                    $.globalMessenger().post({
-                        message:'${flash.get("success")}',
-                        type:'success'
-                        //showCloseButton: true,
-                        //scrollTo: true,
-                        //id:'pwd_changed_success'
-                    });
+            <div><!--
+                <div class="alert fade in" id="info">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>`(*∩_∩*)′</strong> ${flash.get("info")}
+                </div>-->
+            #{if flash.contains("info")}
 
+                <script type="text/javascript">
+
+//                    $(".alert").alert();
+//                    $("#info").removeClass("invisible");
+//
+//                    setTimeout("$('.alert').alert('close');",2000)
                 </script>
             #{/if}
             </div>
@@ -51,8 +49,8 @@
                         <span class="cipher_more">重复新密码必须和新密码一致！</span>
                         <div class="clear"></div>
                     </div>
-
                     <div class="cipher_modify"><input type="button" id="sub" /></div>
+
                 </div>
             </form>
         </div>
@@ -80,7 +78,6 @@
         var new_pwd_flag = false;
         var con_pwd_flag = false;
 
-        $("#sub").attr("disaled")
         /*验证旧密码*/
         $('#old_password').blur(function(){
             var old_password = $(this).val();
@@ -121,7 +118,6 @@
             $('#m_form input').each(function(){
                 $(this).trigger('blur');
             });
-            //TODO:数据校验
             if(!old_pwd_flag){
                 error_shake("#old_pwd input");
             }
@@ -132,7 +128,25 @@
                 error_shake("#con_pwd input");
             }
             if(old_pwd_flag&&new_pwd_flag&&con_pwd_flag){
-                $("#m_form").submit();
+                //$("#m_form").submit();
+                var password = $("#password").val();
+                var ajx_url = "@{Users.doChangePwd()}";
+                $.ajaxSetup({ async : true });
+                $.post(ajx_url,{password:password},function(msg){
+                    $._messengerDefaults = {
+                        extraClasses: 'messenger-theme-block messenger-fixed messenger-on-top',
+                        parentLocations:['div.main_form']
+                    }
+                    $.globalMessenger().post({
+                        message:msg,
+                        type:'success',
+                        showCloseButton:true
+                        //scrollTo: true,
+                        //id:'pwd_changed_success'
+                    });
+                    //$(".alert").alert();
+                    //setTimeout("$('.alert').alert('close');",2000);
+                });
             }
         });
     });

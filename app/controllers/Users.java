@@ -34,13 +34,18 @@ public class Users extends CRUD {
         render(user);
     }
     @Check("user")
-    public static void doChangePwd(){
+    public static String doChangePwd(){
         String id = session.get("userID");
         User user = User.findById(Long.valueOf(id));
         user.password = params.get("password");
-        user.save();
-        flash.put("success","密码修改成功");
-        redirect("Users.changePwd");
+        String info = null;
+        try {
+            user.save();
+            info = "密码修改成功";
+        }catch (Exception e){
+            info = e.getLocalizedMessage()+"密码修改失败";
+        }
+        return info;
     }
     @Check("user")
     public static String checkOldPwd(String pwd){
