@@ -1,0 +1,69 @@
+html,body {height:100%;margin:0;_background-image:url(about:blank);_background-attachment:fixed;}
+* html #WinBox,#WinBox {
+    position:fixed;
+    _position:absolute;
+    top:22%;
+    left:50%;
+    z-index:10004;
+    width:600px;
+    height:auto;
+    margin-left:-300px;
+    padding: 5px 0;
+    background-color:#ffffff;
+    border: 0px #ff0000 solid;
+    border-radius: 3px;
+    _top:   expression(eval(document.compatMode &&
+            document.compatMode=='CSS1Compat') ?
+            documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/
+            document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/
+}
+* html #WinBorder,#WinBorder{
+    z-index:10003;
+    width: 620px;
+    /*height: 120px;*/
+    left:50%;/*FF IE7*/
+    top: 22%;/*FF IE7*/
+    border-radius: 8px;
+    background-color:#8b0000;
+    margin-left:-310px!important;/*FF IE7 该值为本身宽的一半 */
+    margin-top:-10px!important;/*FF IE7 该值为本身高的一半*/
+    margin-top:0px;
+    filter:alpha(opacity=70);/*IE*/
+    opacity:0.7;/*FF*/
+    position:fixed!important;/*FF IE7*/
+    _position:absolute;/*IE6*/
+    _top:   expression(eval(document.compatMode &&
+            document.compatMode=='CSS1Compat') ?
+            documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/
+            document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/
+}
+.CoverBox,#CoverBox {
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top:0;/*FF IE7*/
+    filter:alpha(opacity=60);/*IE*/
+    opacity:0.3;/*FF*/
+    z-index:2000;
+    position:fixed!important;/*FF IE7*/
+    position:absolute;/*IE6*/
+    _top:   expression(eval(document.compatMode &&
+        document.compatMode=='CSS1Compat') ?
+        documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/
+        document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/
+}
+.member_table{ width:100%;border-collapse:collapse; font-size:12px;}
+.member_table .td_label{ line-height:24px; text-align:right; width:20%;}
+.member_table .td_btn{ text-align:center;}
+.ul_normal{ font-size:12px; line-height:21px;}
+.font_big { font-size:14px;}
+.txt_red{ color:#f30;}
+.txt_green{color:#008000;}
+.BoxContent{ line-height:21px; font-size:12px; font-weight:bold; padding-bottom: 18px; text-align:center;}
+.BoxContent a {font-weight:100; text-decoration:none; color:#8b0000;}
+.BoxContent a:hover {font-weight:100; text-decoration:none; color:#f60;}
+.ipt_flat,.ipt_flat_green{ border:1px solid #ccc; height:20px; line-height:20px; padding:2px;}
+.ipt_flat_green{ border:1px solid #CCCCCC;}
+.fr{float:right;}
+.fl{float:left;}
