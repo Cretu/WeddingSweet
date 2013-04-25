@@ -2,15 +2,11 @@ package controllers;
 
 import models.User;
 import play.Play;
-import play.data.FileUpload;
 import play.libs.Files;
 import play.libs.MimeTypes;
-import play.mvc.Http;
-import play.mvc.Router;
 import play.mvc.With;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -65,8 +61,14 @@ public class Users extends CRUD {
         return User.find("byIdAndPassword",id,pwd).first()==null?"false":"true";
     }
     @Check("user")
-    public static void avatar(){
-        render();
+    public static void avatar(String avatarURL){
+		if(new File("public/upload/user_"+session.get("userID")+".jpg").exists()){
+			avatarURL = "/public/upload/user_"+session.get("userID")+".jpg";
+		}
+		if (avatarURL == null){
+			avatarURL = "/public/upload/user_null.jpg";
+		}
+        render(avatarURL);
     }
     @Check("user")
     public static void saveAvatar(File avatar){
@@ -78,9 +80,9 @@ public class Users extends CRUD {
         }else if (Play.configuration.getProperty("allowTypes").indexOf(avatarMimeType)==-1){
             flash.error("不允许的类型");
         }else{
-            saveFileName = "public/upload/user_"+session.get("userID")+avatar.getName().substring(avatar.getName().lastIndexOf('.'));
+            saveFileName = "/public/upload/user_"+session.get("userID")+avatar.getName().substring(avatar.getName().lastIndexOf('.'));
             Files.copy(avatar, Play.getFile(saveFileName));
         }
-       avatar();
+       avatar(saveFileName);
     }
 }

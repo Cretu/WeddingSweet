@@ -6,15 +6,10 @@
 <div class="user_main">
     <div class="main_ttl">修改密码</div>
         <div class="main_form">
-            <div><!--
-                <div class="alert fade in" id="info">
-                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    <strong>`(*∩_∩*)′</strong> ${flash.get("info")}
-                </div>-->
+            <div>
             #{if flash.contains("info")}
 
                 <script type="text/javascript">
-
 //                    $(".alert").alert();
 //                    $("#info").removeClass("invisible");
 //
@@ -128,7 +123,6 @@
                 error_shake("#con_pwd input");
             }
             if(old_pwd_flag&&new_pwd_flag&&con_pwd_flag){
-                //$("#m_form").submit();
                 var password = $("#password").val();
                 var ajx_url = "@{Users.doChangePwd()}";
                 $.ajaxSetup({ async : true });
