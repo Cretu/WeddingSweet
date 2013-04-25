@@ -1,0 +1,207 @@
+#{extends 'main.html'/}
+    <!--
+    <link href="http://www.pelink.cn/css/config.css" rel="stylesheet" type="text/css" />-->
+
+    <link href="http://www.pelink.cn/css/main.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="http://www.pedaily.cn/top/js/jQuery-1.6.4.min.js"></script>
+    <!--<script type="text/javascript" src="/js/tbase.js"></script>
+    <script type="text/javascript" src="http://www.pedaily.cn/top/js/sha1.js"></script>
+    <script type="text/javascript" src="http://www.pelink.cn/js/win.js"></script>
+    <script type="text/javascript" src="http://www.pelink.cn/js/main.js"></script>
+    <script type="text/javascript" src="http://www.pelink.cn/js/comment.js"></script>
+    -->
+
+<form name="aspnetForm" method="post" action="@{Test.saveAvatar()}" enctype="multipart/form-data" id="aspnetForm" onsubmit="return false;" style="float:left;width:670px;">
+
+<div class="m_b_10">
+
+  <div class="tabbody">
+      <div class="black_lump">
+          <span class="icon_lamp left">&nbsp;</span>
+          <div class="msgtxt">
+              贴心提示：
+              <ul class="msglist">
+                  <li>上传自己的形象头像，让更多的人关注您，创造更多商机。</li>
+                  <li>上传图像，建立自己满意的图片区域选区，然后点击“保存我的头像”。</li>
+
+              </ul>
+          </div>
+      </div>
+
+      <table>
+          <tbody id="photo_tbody">
+          <tr>
+              <td scope="col" align="center" style="width:450px;">
+                  <iframe id="photo_upload" name="photo_upload" style="display:none;"></iframe>
+                  <input type="file" id="photo_url" name="avatar" />
+                  <span id="uploading"></span>
+                  <br />
+                  <span style="color:#999;">请选择jpg、gif、png格式，且文件大小不超过2M的图片</span>
+              </td>
+              <td align="left">
+              </td>
+          </tr>
+          <tr>
+              <td align="center">
+                  <img id="photo_img" src="@{'/public/upload/user_8.jpg'}" alt="Cretu"  style="width:213px;" />
+                  <br /><br />
+                  <input type="button" id="savephoto" value="保存我的头像" class="submitbtn"/>
+                  <br />
+                  <span id="savephotomsg" style="display:inline-block;"></span>
+              </td>
+              <td align="left">
+                  <table id="previewstable">
+                      <tr>
+                          <td align="left">
+                              <div style="position:relative;overflow:hidden;width:180px;height:180px;">
+                                  <img id="img_big" src="http://pic.pedaily.cn/blog/hi.jpg" alt="Cretu" width="180"/>
+                              </div>
+                              <span style="color:#999;">大头像尺寸，180*180像素(px)</span>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td align="left">
+                              <div style="position:relative;overflow:hidden;width:120px;height:120px;">
+                                  <img id="img_middle" src="http://pic.pedaily.cn/blog/hi.jpg" alt="Cretu" width="120"/>
+                              </div>
+                              <span style="color:#999;">中等头像尺寸，120*120像素(px)</span>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td align="left">
+                              <div style="position:relative;overflow:hidden;width:50px;height:50px;">
+                                  <img id="img_small" src="http://pic.pedaily.cn/blog/hi.jpg" alt="Cretu" width="50"/>
+                              </div>
+                              <span style="color:#999;">小头像尺寸，50*50像素(px)</span>
+                          </td>
+                      </tr>
+                  </table>
+              </td>
+          </tr>
+          </tbody>
+      </table>
+  </div>
+  <input type="hidden" name="x1" />
+  <input type="hidden" name="y1" />
+  <input type="hidden" name="x2" />
+  <input type="hidden" name="y2" />
+  <input type="hidden" name="width" />
+  <input type="hidden" name="height" />
+  <script type="text/javascript" charset="utf-8" src="http://user.pedaily.cn/top/js/jquery.imgareaselect.pack.js"></script>
+  <script type="text/javascript">
+
+      function preview(img, selection) {
+          if (!selection.width || !selection.height)
+              return;
+          var imgwidth = $('#photo_img').width(), imgheight = $('#photo_img').height();
+          if ($('#img_big').attr('src') != $('#photo_img').attr('src')) {
+              var vsrc = $('#photo_img').attr('src');
+              $('#img_big').attr('src', vsrc);
+              $('#img_middle').attr('src', vsrc);
+              $('#img_small').attr('src', vsrc);
+          }
+          $('#img_big').css({
+              width: Math.round((180 / selection.width) * imgwidth),
+              height: Math.round((180 / selection.height) * imgheight),
+              marginLeft: -Math.round((180 / selection.width) * selection.x1),
+              marginTop: -Math.round((180 / selection.height) * selection.y1)
+          });
+
+          $('#img_middle').css({
+              width: Math.round((120 / selection.width) * imgwidth),
+              height: Math.round((120 / (selection.height || 1)) * imgheight),
+              marginLeft: -Math.round((120 / selection.width) * selection.x1),
+              marginTop: -Math.round((120 / (selection.height || 1)) * selection.y1)
+          });
+
+          $('#img_small').css({
+              width: Math.round((50 / selection.width) * imgwidth),
+              height: Math.round((50 / selection.height) * imgheight),
+              marginLeft: -Math.round((50 / selection.width) * selection.x1),
+              marginTop: -Math.round((50 / selection.height) * selection.y1)
+          });
+      }
+
+      $(function () {
+          //$('#photo_img').imgAreaSelect({ x1: 0, y1: 0, x2: 180, y2: 180 });
+
+          var selobjs = $('#photo_img').imgAreaSelect({
+              aspectRatio: '1:1',
+              //            minWidth: 180,
+              //            minHeight: 180,
+              //            x1: 0, y1: 0,
+              x2: $('#photo_img').width(),
+              y2: $('#photo_img').height(),
+              onSelectChange: preview,
+              parent: $('#photo_img').parent(),
+              onSelectEnd: function (img, selection) {
+                  $('input[name="x1"]').val(selection.x1);
+                  $('input[name="y1"]').val(selection.y1);
+                  $('input[name="x2"]').val(selection.x2);
+                  $('input[name="y2"]').val(selection.y2);
+                  $('input[name="width"]').val(selection.width);
+                  $('input[name="height"]').val(selection.height);
+              }
+          });
+          $('#photo_url').change(function () {
+              $('#uploading').html('正在上传... ...');
+              var form = $('#aspnetForm');
+              form.attr('action', '@{Users.saveAvatar()}').attr('method', 'post')
+                      .attr('encoding', 'multipart/form-data')
+                      .attr('enctype', 'multipart/form-data')
+                      .attr('target', 'photo_upload');
+              form[0].onsubmit = function () { };
+              form.submit();
+          });
+
+      });
+
+      //savephoto
+      $obj('savephoto').onclick = function () {
+          if ($('#photo_img').attr('src').indexOf('pic.pedaily.cn') == -1) {
+              $obj('savephotomsg').className = 'itsok';
+              $obj('savephotomsg').innerHTML = '<i></i>保存成功。';
+              setTimeout(function () { $obj('savephotomsg').style.display = 'none'; }, 1000);
+              return;
+          }
+
+          var ibig = $('#img_big'), imiddle = $('#img_middle'), ismall = $('#img_small');
+          var query = [];
+          query.push(String.format('big={0},{1},{2},{3}', ibig.width(), ibig.height(), ibig.css('marginLeft').replace(/[^\d]/g, ''), ibig.css('marginTop').replace(/[^\d]/g, '')));
+          query.push(String.format('middle={0},{1},{2},{3}', imiddle.width(), imiddle.height(), imiddle.css('marginLeft').replace(/[^\d]/g, ''), imiddle.css('marginTop').replace(/[^\d]/g, '')));
+          query.push(String.format('small={0},{1},{2},{3}', ismall.width(), ismall.height(), ismall.css('marginLeft').replace(/[^\d]/g, ''), ismall.css('marginTop').replace(/[^\d]/g, '')));
+
+          $('#savephoto').val('请稍候...').attr('disabled', true);
+          $.ajax({
+              url: "/account/savephoto.v2.aspx?action=savethumbnail&t=" + Math.random(),
+              type: 'POST',
+              data: query.join('&'),
+              error: function () {
+                  $('#savephoto').val('保存我的头像').removeAttr('disabled');
+                  $obj('savephotomsg').className = 'txt_err';
+                  $obj('savephotomsg').innerHTML = '<i></i>出现错误。';
+              },
+              success: function (d) {
+                  if (d == '200') {
+                      $obj('savephotomsg').className = 'itsok';
+                      $obj('savephotomsg').innerHTML = '<i></i>保存成功。';
+                  } else {
+                      $obj('savephotomsg').className = 'txt_err';
+                      $obj('savephotomsg').innerHTML = '<i></i>出现错误。';
+                  }
+                  $('#savephoto').val('保存我的头像').removeAttr('disabled');
+                  $obj('savephotomsg').style.display = 'inline-block';
+                  setTimeout(function () {
+                      $obj('savephotomsg').style.display = 'none';
+                  }, 1500);
+              }
+          });
+      }
+  </script>
+
+  <div class="clear"></div>
+</div>
+<div class="clear"></div>
+</form>
+<div class="clear"></div>
